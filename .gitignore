@@ -4,3 +4,6 @@ tmp/*
 site
 priv/*
 production-to-test.sh
+public_html/xml_dagens_feed.xml
+ritzau_feed_fetcher/tmp/feed.xml
+ritzau_feed_fetcher/tmp/feed_old.xml
