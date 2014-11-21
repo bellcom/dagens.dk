@@ -1,0 +1,8 @@
+name = NewsCenter v1.1
+description = NewsCenter Premium Theme - Installation Profile. Select this option if you're creating a clean NewsCenter Drupal Site.
+version = VERSION
+core = 7.x
+dependencies[] = block
+files[] = newscenter.profile
+
+

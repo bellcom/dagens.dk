@@ -1,0 +1,9 @@
+name = Senest.dk rss feed importer
+description = Imports latest news from Senest.dk, displays in block
+core = 7.x
+; Examples - use at will
+;package = Views
+;dependencies[] = views
+;dependencies[] = panels
+;files[] = example.test
+;configure = admin/config/content/example

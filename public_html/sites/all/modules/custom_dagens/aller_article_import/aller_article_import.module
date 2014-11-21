@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Aller artikel import feature.
+ */
+
+include_once 'aller_article_import.features.inc';

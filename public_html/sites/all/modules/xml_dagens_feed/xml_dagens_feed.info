@@ -1,0 +1,4 @@
+name = XML- dagens feed
+core = 7.x
+version = 7.x-1.0
+project = rss_dagens_feed

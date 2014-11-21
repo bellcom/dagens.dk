@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the BNP Artikler feature.
+ */
+
+include_once 'bnp_import.features.inc';

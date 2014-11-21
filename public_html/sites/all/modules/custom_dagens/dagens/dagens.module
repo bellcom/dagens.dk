@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the dagens feature.
+ */
+
+include_once 'dagens.features.inc';

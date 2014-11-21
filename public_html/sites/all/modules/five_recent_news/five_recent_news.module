@@ -1,0 +1,86 @@
+<?php
+/**
+ * @file
+ * Code for the Five recent news feature.
+ */
+
+include_once 'five_recent_news.features.inc';
+
+/**
+ * Implements hook_menu().
+ */
+function five_recent_news_menu() {
+  $items = array();
+  $items['admin/content/five_recent_news/iframe'] = array(
+    'title' => t('5 seneste nyheder iframe'),
+    'description' => '',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('five_recent_news_settings_form'),
+    'access callback' => TRUE,
+    'type' => MENU_LOCAL_TASK,
+    //'access arguments' => array('administer site configuration'),
+  );
+  $items['five_recent_news/page'] = array(
+    'title' => t('5 seneste nyheder'),
+    'description' => '',
+    'page callback' => 'five_recent_news_page',
+    'access callback' => TRUE,
+    'type' => MENU_LOCAL_TASK,
+    'weight' => -5,
+  );
+  return $items;
+}
+/**
+ * Implements hook_form().
+ */
+function five_recent_news_settings_form($form, $form_state) {
+  $form['five_recent_news_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('5 seneste nyheder iframe'),
+    '#collapsible' => TRUE,
+  );
+  $form['five_recent_news_settings']['five_recent_news_iframe_view'] = array(
+  '#type' => 'item',
+  '#title' => t('iframe view'),
+  '#markup' => '<iframe src="http://www.dagens.dk/five_recent_news/page" height = "205" width = "310"><p>Your browser does not support iframes.</p></iframe>',
+  );
+  $form['five_recent_news_settings']['five_recent_news_iframe'] = array(
+  '#type' => 'textfield',
+  '#title' => t('iframe code'),
+  '#default_value' => '<iframe src="http://www.dagens.dk/five_recent_news/page" height = "205" width = "310"><p>Your browser does not support iframes.</p></iframe>',
+  '#size' => 200,
+  );
+
+  return $form;
+}
+
+function five_recent_news_page() {
+  global $language, $doctype,$rdf;
+  print '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">';
+  print '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:fb="http://www.facebook.com/2008/fbml"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xisd="http://www.w3.org/2001/XMLSchema#">';
+  print '<head profile="http://www.w3.org/1999/xhtml/vocab">';
+  print '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
+  print "<link type='text/css' rel='stylesheet' href='http://www.dagens.dk/sites/all/modules/five_recent_news/five_recent_news.css' media='all'>";
+  print "</head>";
+  print "<body>";
+  print views_embed_view('5_recent_news','block');
+  print '<script type="text/javascript"> var as = document.getElementsByTagName("a");
+    for (var i = 0, l = as.length; i < l; i++) {
+      var link = "http://eas8.emediate.eu/eas?camp=180739;ty=ct;EASLink=" + as[i].href;
+      as[i].setAttribute("target","_blank");
+      as[i].href = link;
+    }
+  </script>';
+  print "</body></html>";
+}

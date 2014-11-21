@@ -1,0 +1,200 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the BOTCHA module.
+ */
+
+include_once "botcha.module"; // for _botcha_variables()
+
+/**
+ * Implements hook_schema().
+ */
+function botcha_schema() {
+  // Table for assigning recipe cookbooks to the forms.
+  $schema['botcha_points'] = array(
+    'description' => 'This table describes which recipe cookbooks should be used to modify which forms.',
+    'fields' => array(
+      'form_id' => array(
+        'description' => 'The form_id of the form to add a BOTCHA to.',
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'botcha_type' => array(
+        'description' => 'The recipe cookbook to use.',
+        'type' => 'varchar',
+        'length' => 64,
+      ),
+    ),
+    'primary key' => array('form_id'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function botcha_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+  if ($phase == 'runtime') {
+    // Just clean up -dev variables that were renamed
+    //FIXME: decrement this for release: 1
+    //FIXME: remove the below for release when the above is 0
+    if (variable_get('botcha_form_pass_counter', 0) > 0) {
+      variable_set('botcha_form_passed_counter', variable_get('botcha_form_passed_counter', 0) + variable_get('botcha_form_pass_counter', 0));
+      variable_del('botcha_form_pass_counter');
+    }
+    if (variable_get('botcha_wrong_response_counter', 0) > 0) {
+      variable_set('botcha_form_blocked_counter', variable_get('botcha_form_blocked_counter', 0) + variable_get('botcha_wrong_response_counter', 0));
+      variable_del('botcha_wrong_response_counter');
+    }
+
+    $block_cnt = variable_get('botcha_form_blocked_counter', 0);
+    $build_cnt = variable_get('botcha_form_passed_counter', 0) + $block_cnt;
+    // Show statistic counters in the status report.
+    $requirements['botcha_statistics'] = array(
+      'title' => $t('BOTCHA'),
+      'value' => format_plural(
+        $block_cnt,
+        'Already 1 blocked form submission',
+        'Already @count blocked form submissions'
+      )
+      . ($build_cnt > 0 ? ' ' . $t('(!percent% of total !build_cnt processed)',
+        array('!percent' => sprintf("%0.3f", 100 * $block_cnt / $build_cnt), '!build_cnt' => $build_cnt)) : ''),
+      'severity' => REQUIREMENT_INFO,
+    );
+  }
+  return $requirements;
+}
+
+function _botcha_default_form_ids() {
+  // Some default BOTCHA points.
+  $form_ids = array(
+    'user_pass',
+    'user_login',
+    'user_login_block',
+    'user_register_form',
+    'contact_site_form',
+    'contact_personal_form',
+
+    'forum_node_form',
+  );
+  // Add form_ids of comment forms for all currently known node types too.
+  foreach (node_type_get_names() as $type => $name) {
+    $form_ids[] = 'comment_node_' . $type . '_form';
+  }
+  return $form_ids;
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function botcha_install() {
+  $t = get_t();
+
+  // Insert some default BOTCHA points.
+  $form_ids = _botcha_default_form_ids();
+  foreach ($form_ids as $form_id) {
+    $id = db_insert('botcha_points')
+    ->fields(array(
+      'form_id' => $form_id,
+      'botcha_type' => 'default',
+    ))
+      ->execute();
+  }
+
+  $i18n_variables = variable_get('i18n_variables', '');
+  if (!is_array($i18n_variables)) {
+    $i18n_variables = array();
+  }
+  $i18n_variables = array_merge($i18n_variables, _botcha_variables(TRUE));
+  variable_set('i18n_variables', $i18n_variables);
+
+  // Be friendly to your users: what to do after install?
+  drupal_set_message($t('You can now <a href="!botcha_admin">configure BOTCHA module</a> for your site.',
+    array('!botcha_admin' => url('admin/config/people/botcha'))), 'status');
+
+// UNUSED
+//  // Explain to users that page caching may be disabled.
+//  if (variable_get('cache', 0) != 0) {
+//    drupal_set_message($t('Note that BOTCHA module disables <a href="!performance_admin">page caching</a> of pages that include forms processed by BOTCHA. ',
+//    array('!performance_admin' => url('admin/config/development/performance'))), 'warning');
+//  }
+
+  // Generate unique secret for this site
+  variable_set('botcha_secret', md5(uniqid(mt_rand(), TRUE)));
+
+  // Ensure statistics variables exist
+  variable_set('botcha_form_passed_counter', variable_get('botcha_form_passed_counter', 0));
+  variable_set('botcha_form_blocked_counter', variable_get('botcha_form_blocked_counter', 0));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function botcha_uninstall() {
+
+  db_delete('variable')
+  ->condition('name', 'botcha_%', 'LIKE')
+  ->execute();
+  //  foreach (_botcha_variables() as $var) { variable_del($var); }
+
+  $i18n_variables = variable_get('i18n_variables', '');
+  if (is_array($i18n_variables)) {
+    $i18n_variables = array_diff($i18n_variables, _botcha_variables());
+    variable_set('i18n_variables', $i18n_variables);
+  }
+  cache_clear_all('variables', 'cache');
+}
+
+/**
+ * Migrate form configuration for changed form ids in Drupal 7.
+ */
+function botcha_update_7000() {
+  // 'user_register' became 'user_register_form'.
+  db_update('botcha_points')
+    ->fields(array('form_id' => 'user_register_form'))
+    ->condition('form_id', 'user_register')
+    ->execute();
+  // 'contact_mail_page' became 'contact_site_form'.
+  db_update('botcha_points')
+    ->fields(array('form_id' => 'contact_site_form'))
+    ->condition('form_id', 'contact_mail_page')
+    ->execute();
+  // 'contact_mail_user' became 'contact_personal_form'.
+  db_update('botcha_points')
+    ->fields(array('form_id' => 'contact_personal_form'))
+    ->condition('form_id', 'contact_mail_user')
+    ->execute();
+
+  // The D6-style comment_form form_id is split per node type
+  // in D7: comment_node_{type}_form, e.g. comment_node_page_form.
+  // Get the current settings for 'comment_form'.
+  $botcha_point = db_query(
+    "SELECT * FROM {botcha_points} WHERE form_id = :comment_form_id",
+    array(':comment_form_id' => 'comment_form')
+  )->fetchObject();
+  if ($botcha_point !== FALSE) {
+    // Create entries for D7-style node form IDs.
+    $botcha_type = $botcha_point->botcha_type;
+    foreach (node_type_get_names() as $type => $name) {
+      $form_id = 'comment_node_' . $type . '_form';
+      db_insert('botcha_points')
+        ->fields(array(
+          'form_id' => $form_id,
+          'botcha_type' => $botcha_type,
+        ))
+        ->execute();
+    }
+    // Delete outdated entry.
+    db_delete('botcha_points')
+      ->condition('form_id', 'comment_form')
+      ->execute();
+  }
+}
+
+//END

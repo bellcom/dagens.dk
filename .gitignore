@@ -1,0 +1,6 @@
+logs/*
+sessions/*
+tmp/*
+site
+priv/*
+production-to-test.sh

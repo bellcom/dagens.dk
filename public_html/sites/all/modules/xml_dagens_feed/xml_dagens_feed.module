@@ -1,0 +1,133 @@
+<?php
+/**
+ * @file
+ * Code for the XML - dagens feed module.
+ */
+
+function xml_dagens_feed_cron(){
+xml_dagens_feed_update();
+}
+
+/**
+ * Update the xml feed
+ */
+function xml_dagens_feed_update(){
+
+  // tag is currently unused, kept for reference
+  $fields = array(
+    'body' => array('type' => 'field', 'tag' => 'body'),
+    'created' => array('type' => 'property', 'tag' => 'created'),
+    'changed' => array('type' => 'property', 'tag' => 'changed'),
+    'title' => array('type' => 'property', 'tag' => 'title'),
+    'name' => array('type' => 'property', 'tag' => 'title'),
+    'field_slugline' => array('type' => 'field', 'tag' => 'slugline'),
+    'field_tags' => array('type' => 'taxonomy', 'tag' => 'tags'),
+    'field_keywords' => array('type' => 'taxonomy', 'tag' => 'tags'),
+    'field_region' => array('type' => 'taxonomy', 'tag' => 'region'),
+  );
+
+  $query = new EntityFieldQuery;
+  $result = $query
+    ->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'article')
+    ->propertyCondition('status', 1)
+    ->fieldCondition('field_xmlfeed', 'value', 1)
+    ->range(0, 50)
+    ->propertyOrderBy('changed', 'DESC')
+    ->execute();
+
+  $articles = node_load_multiple(array_keys(array_shift($result)));
+
+  $articles_data = xml_dagens_feed_parse_articles($articles, $fields);
+  $xml = xml_dagens_feed_generate_xml($articles_data, $fields);
+
+  file_put_contents(DRUPAL_ROOT . '/xml_dagens_feed.xml', $xml);
+}
+
+/**
+ * Generate XML and save to file.
+ */
+function xml_dagens_feed_generate_xml($articles_data){
+    $domtree = new DOMDocument('1.0', 'UTF-8');
+
+    $xmlRoot = $domtree->createElement("xml");
+
+    $xmlRoot = $domtree->appendChild($xmlRoot);
+
+    $articles = $domtree->createElement("articles");
+    $articles = $xmlRoot->appendChild($articles);
+
+  foreach($articles_data as $article_data){
+    $article = $articles->appendChild($domtree->createElement("article"));
+    $article->appendChild($domtree->createElement('title', $article_data['title']));
+    $article->appendChild($domtree->createElement('slugline', $article_data['field_slugline']));
+    $article->appendChild($domtree->createElement('byline', $article_data['name']));
+    $article->appendChild($domtree->createElement('created', $article_data['created']));
+    $article->appendChild($domtree->createElement('changed', $article_data['changed']));
+    $article->appendChild($domtree->createElement('body', $article_data['body']));
+    $article->appendChild($domtree->createElement('category', $article_data['field_tags'][0]));
+    $tags = $article->appendChild($domtree->createElement('tags'));
+    if(is_array($article_data['field_keywords'])){
+      foreach($article_data['field_keywords'] as $tag){
+        $tags->appendChild($domtree->createElement('tag', $tag));
+      }
+    }
+    $article->appendChild($domtree->createElement('region', $article_data['field_region'][0]));
+
+  }
+  return $domtree->saveXML();
+}
+
+/** 
+ * Parse articles, get data
+ */
+function xml_dagens_feed_parse_articles($articles, $fields = array()){
+  $fields_data = array();
+
+  foreach($articles as $article){
+    $fields_data[] = xml_dagens_feed_get_field_data($article, $fields);
+  }
+
+  return $fields_data;
+}
+
+/**
+ * Parse single article, get data specified in fields array.
+ */
+function xml_dagens_feed_get_field_data($article, $fields = array()){
+  $field_data = array();
+  foreach($fields as $field_name => $info){
+    $field_data[$field_name] = '';
+    if($info['type'] != 'property' && $field = field_get_items('node', $article, $field_name)){
+    
+      if($info['type'] == 'taxonomy'){
+        $field_data[$field_name] = xml_dagens_feed_parse_taxonomy($field);
+      }
+      else {
+        if(is_array($field)){
+          $field_data[$field_name] = html_entity_decode(strip_tags(array_shift(array_shift($field)), '<p>'));
+        }
+      }
+    }
+
+    if($info['type'] == 'property'){
+      $field_data[$field_name] = $article->$field_name;
+    }
+  }
+
+  return $field_data;
+}
+
+/**
+ * Get taxonomy name(s).
+ */
+function xml_dagens_feed_parse_taxonomy($field_data){
+  $taxonomy_items = array();
+
+  foreach ($field_data as $field){
+    $taxonomy = taxonomy_term_load(array_shift($field));
+    $taxonomy_items[] = $taxonomy->name;
+  }
+
+  return $taxonomy_items;
+}

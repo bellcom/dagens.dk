@@ -1,0 +1,24 @@
+name = BOTCHA
+description = BOTCHA Spam Prevention.
+package = "Spam control"
+core = 7.x
+configure = admin/config/people/botcha
+
+files[] = botcha.install
+files[] = botcha.module
+files[] = botcha.inc
+files[] = botcha.botcha.inc
+files[] = botcha.pages.inc
+files[] = botcha.rules.inc
+
+; Tests
+files[] = botcha.test
+
+
+
+; Information added by drupal.org packaging script on 2012-05-02
+version = "7.x-1.0"
+core = "7.x"
+project = "botcha"
+datestamp = "1335981650"
+

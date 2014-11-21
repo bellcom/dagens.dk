@@ -1,0 +1,5 @@
+name = Dagens import
+description = Additional stuff for article import
+core = 7.x
+dependencies[] = feeds
+dependencies[] = feeds_tamper

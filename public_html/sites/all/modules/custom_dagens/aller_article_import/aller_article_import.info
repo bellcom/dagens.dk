@@ -1,0 +1,14 @@
+name = Aller artikel import
+description = Import feed til Aller artikler.
+core = 7.x
+package = Dagens
+php = 5.2.4
+version = 7.x-1.0
+project = aller_article_import
+dependencies[] = ctools
+dependencies[] = dagens
+dependencies[] = feeds
+dependencies[] = feeds_fetcher_directory
+features[ctools][] = feeds:feeds_importer_default:1
+features[features_api][] = api:1
+features[feeds_importer][] = aller_feed

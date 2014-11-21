@@ -1,0 +1,45 @@
+<?php
+$uid = 272;
+$type = 'article';
+$category = 904;
+
+$realpath = '/var/www/dagens.dk/ritzau_feed_fetcher/feeds/feed.xml';
+
+if(!is_file($realpath)){
+  die("\nFile not found: ". $realpath . "\n\n");
+}
+
+$string = file_get_contents($realpath);
+
+
+$xml = new SimpleXMLElement($string);
+$result = $xml->xpath('//RBNews');
+
+while(list( , $obj) = each($result)) {
+  $query = db_query('SELECT * FROM  `node_revision` WHERE  `log` LIKE  :newsid', array(':newsid' => reset($obj->NewsID)))->fetchAll();
+
+  if(empty($query)){
+    $node = new stdClass();
+    $node->type = $type;
+
+    node_object_prepare($node);
+
+    $node->uid = $uid;
+    $node->log = reset($obj->NewsID);
+    $node->language = LANGUAGE_NONE;
+
+    $node->title = reset($obj->headline);
+    $node->field_tags[LANGUAGE_NONE][0]['tid'] = $category;
+
+    $node->field_slugline[LANGUAGE_NONE][0]['value'] = strip_tags(reset($obj->subtitle));
+    $node->body[LANGUAGE_NONE][0]['value'] = strip_tags(reset($obj->content), '<p>');
+    $node->body[LANGUAGE_NONE][0]['format'] = 'full_html';
+
+    node_save($node);
+  }
+  else {
+    error_log('Article already created');
+  }
+}
+
+unlink($realpath);

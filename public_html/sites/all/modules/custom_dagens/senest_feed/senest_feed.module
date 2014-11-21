@@ -1,0 +1,167 @@
+<?php
+/**
+ * Fetches specified number of items from specified rss feed, generates markup
+ * and sticks it in cache on cron run.
+ * Serves cache in block for generic use.
+ *
+ * @author Thomas Thune Hansen <tth@bellcom.dk>
+ * @copyright bellcom open source aps
+ */
+
+/*
+ * Implements hook_menu()
+ */
+function senest_feed_menu(){
+  $items['admin/config/senest_feed'] = array(
+    'title' => 'Senest feed',
+    'description' => 'import senest feed',
+    'position' => 'right',
+    'page callback' => 'system_admin_menu_block_page',
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+    'access arguments' => array('administer site configuration'),
+  );
+
+  $items['admin/config/senest_feed/settings'] = array(
+    'title' => 'Senest feed',
+    'description' => 'import senest feed',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('senest_feed_settings_form'),
+    'access arguments' => array('administer site configuration'),
+  );
+
+  return $items;
+}
+
+/*
+ * page callback for admin settings
+ */
+function senest_feed_settings_form(){
+  $form = array();
+
+  $form['senest_feed_url'] = array(
+    '#title' => t('Feed url'),
+    '#type' => 'textfield',
+    '#default_value' => variable_get('senest_feed_url'),
+  );
+
+  return system_settings_form($form);
+}
+
+/*
+ * Implements hook_cron()
+ */
+function senest_feed_cron(){
+  $xml = senest_feed_get_feed();
+
+  $markup = senest_feed_parse_feed($xml);
+
+  cache_set('senest_feed', $markup);
+}
+
+/*
+ * Implements hook_block_info()
+ */
+function senest_feed_block_info(){
+  $blocks['senest_feed'] = array(
+    'info' => t('Senest feed'),
+  );
+
+  return $blocks;
+}
+
+/*
+ * Implements hook_block_view()
+ */
+function senest_feed_block_view($delta){
+  switch($delta){
+    case 'senest_feed':
+      $cache = cache_get('senest_feed');
+
+      if(empty($cache->data)){
+        senest_feed_cron();
+      }
+
+      $block['subject'] = t('Senest.dk');
+      $block['content'] = $cache->data;
+
+      break;
+  }
+
+  return $block;
+}
+
+/*
+ * Feed fetcher
+ *
+ * @return
+ *  xml - rss feed
+ */
+function senest_feed_get_feed(){
+  $url = variable_get('senest_feed_url');
+
+  $xml = file_get_contents($url);
+  
+  return $xml;
+}
+
+/*
+ * Feed parser
+ *
+ * @return
+ *  markup
+ */
+function senest_feed_parse_feed($xml){
+  $markup = '<div class="senest-feed-container">';
+  if($xml){
+    $x = simplexml_load_string($xml, null, LIBXML_NOCDATA);
+    $count = variable_get('senest_feed_count', 3);
+
+    for($i = 0 ; $i < $count; $i++){
+      $item = $x->channel->item[$i];
+
+      $title = $item->title;
+      $link = $item->link;
+
+      $page = file_get_contents($link);
+
+      $doc = new DOMDocument();
+    
+      // Load HTML and mute errors
+      @$doc->loadHTML($page);
+      
+      // Fetch image url from meta property
+      foreach( $doc->getElementsByTagName('img') as $meta ) { 
+        if ($meta->getAttribute('class') === "attachment-large wp-post-image"){
+          $image_url = $meta->getAttribute('src');
+
+          // Get download image from page
+          $file = file_unmanaged_save_data(file_get_contents($image_url), 'public://senest'.$i.'.jpg', FILE_EXISTS_REPLACE);
+          
+          // Resize and save
+          $image = image_load($file);
+          image_scale_and_crop($image, '280', '184');
+          image_save($image);
+        }
+      }
+      
+      $markup .= '
+<div class="senest-feed-item">
+  <span class="bnr">
+    <a href="'.$link.'">
+      <img src="/sites/default/files/senest'.$i.'.jpg">
+    </a>
+  </span>
+  <span class="title">
+    <a href="'.$link.'">
+    <h2>' .$title . '</h2>
+    </a>
+  </span>
+</div>';
+    }
+
+    $markup .= '</div>';
+    
+    return $markup;
+  }
+}
