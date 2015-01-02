@@ -1297,7 +1297,7 @@ function dagens_views_default_views() {
   /* Display: Block 1 */
   $handler = $view->new_display('block', 'Block 1', 'block');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Sundhed';
+  $handler->display->display_options['title'] = 'Krimi';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -1320,7 +1320,7 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '958',
+    0 => '2094',
   );
   $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
   $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
@@ -1329,7 +1329,7 @@ function dagens_views_default_views() {
   /* Display: Attachment 1 */
   $handler = $view->new_display('attachment', 'Attachment 1', 'attachment_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Samfund';
+  $handler->display->display_options['title'] = 'Krimi';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -1418,7 +1418,7 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '958',
+    0 => '2094',
   );
   $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
   $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
@@ -1431,7 +1431,7 @@ function dagens_views_default_views() {
   /* Display: Attachment 2 */
   $handler = $view->new_display('attachment', 'Attachment 2', 'attachment_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Samfund';
+  $handler->display->display_options['title'] = 'Politik';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -1520,7 +1520,7 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
-    0 => '153',
+    0 => '949',
   );
   $handler->display->display_options['filters']['term_node_tid_depth']['vocabulary'] = 'tags';
   $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '2';
@@ -1540,7 +1540,7 @@ function dagens_views_default_views() {
   /* Display: Attachment 3 */
   $handler = $view->new_display('attachment', 'Attachment 3', 'attachment_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Samfund';
+  $handler->display->display_options['title'] = 'Sundhed';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -1629,7 +1629,7 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '4465',
+    0 => '958',
   );
   $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
   $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
@@ -1758,7 +1758,7 @@ function dagens_views_default_views() {
   /* Display: Attachment 5 */
   $handler = $view->new_display('attachment', 'Attachment 5', 'attachment_5');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Samfund';
+  $handler->display->display_options['title'] = 'Efterlysninger';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -1842,15 +1842,14 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filterkriterie: Indhold: Kategori (field_tags) */
-  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
-  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '927',
+  /* Filterkriterie: Indhold: Tags (field_keywords) */
+  $handler->display->display_options['filters']['field_keywords_tid']['id'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['table'] = 'field_data_field_keywords';
+  $handler->display->display_options['filters']['field_keywords_tid']['field'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['value'] = array(
+    0 => '10066',
   );
-  $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
-  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
+  $handler->display->display_options['filters']['field_keywords_tid']['vocabulary'] = 'keywords';
   $handler->display->display_options['displays'] = array(
     'block_5' => 'block_5',
     'default' => 0,
@@ -1867,7 +1866,7 @@ function dagens_views_default_views() {
   /* Display: Attachment 6 */
   $handler = $view->new_display('attachment', 'Attachment 6', 'attachment_6');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Samfund';
+  $handler->display->display_options['title'] = 'Advarsler';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -1951,15 +1950,14 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filterkriterie: Indhold: Kategori (field_tags) */
-  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
-  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '949',
+  /* Filterkriterie: Indhold: Tags (field_keywords) */
+  $handler->display->display_options['filters']['field_keywords_tid']['id'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['table'] = 'field_data_field_keywords';
+  $handler->display->display_options['filters']['field_keywords_tid']['field'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['value'] = array(
+    0 => '6902',
   );
-  $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
-  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
+  $handler->display->display_options['filters']['field_keywords_tid']['vocabulary'] = 'keywords';
   $handler->display->display_options['displays'] = array(
     'block_6' => 'block_6',
     'default' => 0,
@@ -1976,7 +1974,7 @@ function dagens_views_default_views() {
   /* Display: Attachment 7 */
   $handler = $view->new_display('attachment', 'Attachment 7', 'attachment_7');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Samfund';
+  $handler->display->display_options['title'] = 'God karma';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -2060,15 +2058,14 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filterkriterie: Indhold: Kategori (field_tags) */
-  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
-  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '2094',
+  /* Filterkriterie: Indhold: Tags (field_keywords) */
+  $handler->display->display_options['filters']['field_keywords_tid']['id'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['table'] = 'field_data_field_keywords';
+  $handler->display->display_options['filters']['field_keywords_tid']['field'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['value'] = array(
+    0 => '10500',
   );
-  $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
-  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
+  $handler->display->display_options['filters']['field_keywords_tid']['vocabulary'] = 'keywords';
   $handler->display->display_options['displays'] = array(
     'block_7' => 'block_7',
     'default' => 0,
@@ -2085,7 +2082,7 @@ function dagens_views_default_views() {
   /* Display: Attachment 8 */
   $handler = $view->new_display('attachment', 'Attachment 8', 'attachment_8');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Samfund';
+  $handler->display->display_options['title'] = 'Frækt';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -2169,15 +2166,14 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filterkriterie: Indhold: Kategori (field_tags) */
-  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
-  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '959',
+  /* Filterkriterie: Indhold: Tags (field_keywords) */
+  $handler->display->display_options['filters']['field_keywords_tid']['id'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['table'] = 'field_data_field_keywords';
+  $handler->display->display_options['filters']['field_keywords_tid']['field'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['value'] = array(
+    0 => '6407',
   );
-  $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
-  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
+  $handler->display->display_options['filters']['field_keywords_tid']['vocabulary'] = 'keywords';
   $handler->display->display_options['displays'] = array(
     'block_1' => 'block_1',
     'default' => 0,
@@ -2194,7 +2190,7 @@ function dagens_views_default_views() {
   /* Display: Block 8 */
   $handler = $view->new_display('block', 'Block 8', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Teknologi';
+  $handler->display->display_options['title'] = 'Frækt';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Indhold: Redigér-link */
@@ -2280,21 +2276,20 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filterkriterie: Indhold: Kategori (field_tags) */
-  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
-  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '959',
+  /* Filterkriterie: Indhold: Tags (field_keywords) */
+  $handler->display->display_options['filters']['field_keywords_tid']['id'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['table'] = 'field_data_field_keywords';
+  $handler->display->display_options['filters']['field_keywords_tid']['field'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['value'] = array(
+    0 => '6407',
   );
-  $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
-  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
+  $handler->display->display_options['filters']['field_keywords_tid']['vocabulary'] = 'keywords';
   $handler->display->display_options['block_description'] = 'Dagens artikler - blok 8';
 
   /* Display: Block 2 */
   $handler = $view->new_display('block', 'Block 2', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Sport';
+  $handler->display->display_options['title'] = 'Politik';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -2317,7 +2312,7 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
-    153 => '153',
+    949 => '949',
   );
   $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth']['vocabulary'] = 'tags';
@@ -2328,7 +2323,7 @@ function dagens_views_default_views() {
   /* Display: Block 3 */
   $handler = $view->new_display('block', 'Block 3', 'block_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Ferie og rejse';
+  $handler->display->display_options['title'] = 'Sundhed';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -2351,7 +2346,7 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '4465',
+    0 => '958',
   );
   $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
   $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
@@ -2392,7 +2387,7 @@ function dagens_views_default_views() {
   /* Display: Block 5 */
   $handler = $view->new_display('block', 'Block 5', 'block_5');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Business';
+  $handler->display->display_options['title'] = 'Efterlysninger';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Indhold: Redigér-link */
@@ -2478,21 +2473,20 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filterkriterie: Indhold: Kategori (field_tags) */
-  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
-  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '927',
+  /* Filterkriterie: Indhold: Tags (field_keywords) */
+  $handler->display->display_options['filters']['field_keywords_tid']['id'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['table'] = 'field_data_field_keywords';
+  $handler->display->display_options['filters']['field_keywords_tid']['field'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['value'] = array(
+    0 => '10066',
   );
-  $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
-  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
+  $handler->display->display_options['filters']['field_keywords_tid']['vocabulary'] = 'keywords';
   $handler->display->display_options['block_description'] = 'Dagens artikler - blok 5';
 
   /* Display: Block 6 */
   $handler = $view->new_display('block', 'Block 6', 'block_6');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Politik';
+  $handler->display->display_options['title'] = 'Advarsler';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Indhold: Redigér-link */
@@ -2578,21 +2572,20 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filterkriterie: Indhold: Kategori (field_tags) */
-  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
-  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '949',
+  /* Filterkriterie: Indhold: Tags (field_keywords) */
+  $handler->display->display_options['filters']['field_keywords_tid']['id'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['table'] = 'field_data_field_keywords';
+  $handler->display->display_options['filters']['field_keywords_tid']['field'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['value'] = array(
+    0 => '6902',
   );
-  $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
-  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
+  $handler->display->display_options['filters']['field_keywords_tid']['vocabulary'] = 'keywords';
   $handler->display->display_options['block_description'] = 'Dagens artikler - blok 6';
 
   /* Display: Block 7 */
   $handler = $view->new_display('block', 'Block 7', 'block_7');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Krimi';
+  $handler->display->display_options['title'] = 'God karma';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Indhold: Redigér-link */
@@ -2678,15 +2671,14 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filterkriterie: Indhold: Kategori (field_tags) */
-  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
-  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
-  $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
-    0 => '2094',
+  /* Filterkriterie: Indhold: Tags (field_keywords) */
+  $handler->display->display_options['filters']['field_keywords_tid']['id'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['table'] = 'field_data_field_keywords';
+  $handler->display->display_options['filters']['field_keywords_tid']['field'] = 'field_keywords_tid';
+  $handler->display->display_options['filters']['field_keywords_tid']['value'] = array(
+    0 => '10500',
   );
-  $handler->display->display_options['filters']['field_tags_tid']['group'] = '0';
-  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
+  $handler->display->display_options['filters']['field_keywords_tid']['vocabulary'] = 'keywords';
   $handler->display->display_options['block_description'] = 'Dagens artikler - blok 7';
   $export['dagens_artikler'] = $view;
 
@@ -2837,6 +2829,91 @@ function dagens_views_default_views() {
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['block_description'] = 'Nyeste gallerier';
   $export['dagens_billedgallerier'] = $view;
+
+  $view = new view();
+  $view->name = 'dagens_gossip';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Dagens Gossip';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Dagens gossip';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'mere';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
+  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
+  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'senest-feed-item';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Felt: Indhold: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['element_wrapper_class'] = 'bnr';
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'dagens_gossip',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_image']['delta_offset'] = '0';
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'title';
+  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
+  /* Filterkriterie: Indhold: Har taksonomiterm */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    0 => '10054',
+  );
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'keywords';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $export['dagens_gossip'] = $view;
 
   $view = new view();
   $view->name = 'featured_article';

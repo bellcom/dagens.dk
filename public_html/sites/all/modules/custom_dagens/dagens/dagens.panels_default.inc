@@ -53,9 +53,7 @@ document.write(\'<scr\'+\'ipt type="text/javascript" src="http://dinsalgsvagt.ad
 </script>    
 <noscript>
 <iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=62&keywords=" frameborder="0" marginheight="0" marginwidth="0" width="930" height="180" scrolling="no" style="width:930px; height:180px; margin:0px;"></iframe>
-</noscript>
-
-',
+</noscript>',
       'format' => 'banner',
       'substitute' => TRUE,
     );
@@ -422,14 +420,16 @@ var gmtp = "http", gmturl = gmtp + "://dk.gmads.net/r", gmttzd = (new Date).getT
       'admin_title' => 'Redaktionen',
       'title' => 'Redaktion',
       'body' => '<p>Ansvarshavende chefredakt&oslash;r:<br />
-	<a href="mailto:mikkel@dagens.dk">Mikkel Lysgaard</a></p>
-<p>Jourhavende<a href="mailto:ec@dagens.dk"><br />
-	Elo Christoffersen</a><br />
-	<a href="mailto:na@dagens.dk">Ninna Andreasen</a><br />
-	<a href="mailto:ls@dagens.dk">Lotte S&oslash;rensen</a><br />
+	<a href="mailto:kasper@dagens.dk">Kasper Christensen</a></p>
+<p>Redaktionschef:<br />
+	<a href="mailto:anders@dagens.dk">Anders Reinholdt</a></p>
+<p>Jourhavende<br />
 	<a href="mailto:ss@dagens.dk">Sol Stoffregen</a><br />
 	<a href="mailto:ror@dagens.dk">Ronja Ryde</a><br />
-	<a href="mailto:pm@dagens.dk">Peter Mathiasen</a></p>
+	<a href="mailto:na@dagens.dk">Ninna Andreasen</a><br />
+	<a href="mailto:kp@dagens.dk">Kirstine Petersen</a><br />
+	<a href="mailto:jesper@dagens.dk">Jesper Larsen</a><br />
+	<a href="mailto:stinne@dagens.dk">Stinne Jakobsen</a></p>
 <div class="contact">
 	Kontakt dagens.dk:<br />
 	<a href="mailto:redaktion@dagens.dk" title="redaktion@dagens.dk">redaktion@dagens.dk</a><br />
