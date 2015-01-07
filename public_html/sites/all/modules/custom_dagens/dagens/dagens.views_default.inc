@@ -2906,9 +2906,9 @@ function dagens_views_default_views() {
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
   $handler->display->display_options['filters']['tid']['value'] = array(
-    0 => '10054',
+    0 => '9943',
   );
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'keywords';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'tags';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
