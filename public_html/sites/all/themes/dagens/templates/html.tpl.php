@@ -6,6 +6,7 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
 <script type='text/javascript'>
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -20,15 +21,12 @@ var node = document.getElementsByTagName('script')[0];
 node.parentNode.insertBefore(gads, node);
 })();
 </script>
-
+ 
 <script type='text/javascript'>
 googletag.cmd.push(function() {
-googletag.defineSlot('/49662453/artikelbanner_midt_dagens.dk', [300, 250], 'div-gpt-ad-1383227711488-0').addService(googletag.pubads());
-googletag.pubads().enableSingleRequest();
-googletag.enableServices();
-});
-googletag.cmd.push(function() {
-googletag.defineSlot('/49662453/DagensDK_930x180_Bottom', [[728, 90], [930, 180]], 'div-gpt-ad-1416234658363-0').addService(googletag.pubads());
+googletag.defineSlot('/49662453/DagensDK_930x180_1', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-0').addService(googletag.pubads());
+googletag.defineSlot('/49662453/DagensDK_930x180_2', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-1').addService(googletag.pubads());
+googletag.defineSlot('/49662453/DagensDK_930x180_3', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-2').addService(googletag.pubads());
 googletag.pubads().enableSingleRequest();
 googletag.enableServices();
 });

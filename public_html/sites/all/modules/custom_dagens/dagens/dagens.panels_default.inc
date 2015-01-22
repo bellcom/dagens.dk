@@ -43,17 +43,13 @@ function dagens_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => 'Banner - Bred bund',
       'title' => '<none>',
-      'body' => '<!-- adServing 7.1.1c www.dagens.dk + Midtbanner 930x180 -->
-<script type="text/javascript">
-var adspaceid = \'62\';
-var keywords = \'sex\';
-var searchwords = \'\'; //insert searchwords seperated by semicolon
-if(adServingLoad == undefined) var adServingLoad = \'\';
-document.write(\'<scr\'+\'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/js.php?adspaceid=\'+adspaceid+\'&adServingLoad=\'+adServingLoad+\'&keywords=\'+keywords+\'&sw=\'+searchwords+\'&rnd=\'+Math.random()+\'"></scr\'+\'ipt>\');
-</script>    
-<noscript>
-<iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=62&keywords=" frameborder="0" marginheight="0" marginwidth="0" width="930" height="180" scrolling="no" style="width:930px; height:180px; margin:0px;"></iframe>
-</noscript>',
+      'body' => '<!-- Begin - DagensDK_930x180_2 -->
+<div id=\'div-gpt-ad-1418125366865-1\'>
+    <script type=\'text/javascript\'>
+        googletag.cmd.push(function() { googletag.display(\'div-gpt-ad-1418125366865-1\'); });
+    </script>
+</div>
+<!-- End - DagensDK_930x180_2 -->',
       'format' => 'banner',
       'substitute' => TRUE,
     );
