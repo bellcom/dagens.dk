@@ -18,18 +18,15 @@
   </footer>
     <div class="artlDtlBnr ac">
  <?php echo views_embed_view('billeder_fra_artikel', $display_id = 'block_1') ?>
-    <div class="adItm"><!-- adServing 7.1.1c www.dagens.dk + 250x250 -->
-      <script type="text/javascript">
-      var adspaceid = '187';
-      var keywords = 'sex';
-      var searchwords = ''; //insert searchwords seperated by semicolon
-      if(adServingLoad == undefined) var adServingLoad = '';
-      document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/js.php?adspaceid='+adspaceid+'&adServingLoad='+adServingLoad+'&keywords='+keywords+'&sw='+searchwords+'&rnd='+Math.random()+'"></scr'+'ipt>');
-      </script>
-      <noscript>
-      <iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=187&keywords=" frameborder="0" marginheight="0" marginwidth="0" width="250" height="250" scrolling="no" style="width:250px; height:250px; margin:0px;"></iframe>
-      </noscript>
-      </div>
+
+	<!-- Begin - DagensDK_250x250_Article_1 -->
+	<div class="adItm" id='div-DagensDk_250x250_Article_1' style='width:250px; height:250px;'>
+		<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-DagensDk_250x250_Article_1'); });
+		</script>
+	</div>
+	<!-- End - DagensDK_250x250_Article_1 -->
+
     </div>
   <?php endif; ?>
   <aside class="conSide socSide">
@@ -121,33 +118,25 @@
 
   </div>
   <div class="google-ads-article-bottom">
-    <div class="ad-left ad">
-      <!-- adServing 7.1.1c www.dagens.dk + 250x250 Nr2 -->
-      <script type="text/javascript">
-        var adspaceid = '225';
-        var keywords = 'sex';
-        var searchwords = ''; //insert searchwords seperated by semicolon
-        if(adServingLoad == undefined) var adServingLoad = '';
-        document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/js.php?adspaceid='+adspaceid+'&adServingLoad='+adServingLoad+'&keywords='+keywords+'&sw='+searchwords+'&rnd='+Math.random()+'"></scr'+'ipt>');
-      </script>
-      <noscript>
-        <iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=225&keywords=" frameborder="0" marginheight="0" marginwidth="0" width="250" height="250" scrolling="no" style="width:250px; height:250px; margin:0px;"></iframe>
-      </noscript>
-    </div>
-    <div class="ad-right ad">
 
-      <!-- adServing 7.1.1c www.dagens.dk + 250x250 Nr3 -->
-      <script type="text/javascript">
-      var adspaceid = '226';
-      var keywords = 'sex';
-      var searchwords = ''; //insert searchwords seperated by semicolon
-      if(adServingLoad == undefined) var adServingLoad = '';
-      document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/js.php?adspaceid='+adspaceid+'&adServingLoad='+adServingLoad+'&keywords='+keywords+'&sw='+searchwords+'&rnd='+Math.random()+'"></scr'+'ipt>');
-      </script>
-      <noscript>
-      <iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=226&keywords=" frameborder="0" marginheight="0" marginwidth="0" width="250" height="250" scrolling="no" style="width:250px; height:250px; margin:0px;"></iframe>
-      </noscript>
-    </div>
+
+	<!-- Begin - DagensDK_250x250_Article_2 -->
+	<div class="ad-left ad" id='div-DagensDk_250x250_Article_2' style='width:250px; height:250px;'>
+		<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-DagensDk_250x250_Article_2'); });
+		</script>
+	</div>
+	<!-- End - DagensDK_250x250_Article_2 -->
+
+
+	<!-- Begin - DagensDk_250x250_Article_3 -->
+	<div class="ad-right ad" id='div-DagensDk_250x250_Article_3' style='width:250px; height:250px;'>
+		<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-DagensDk_250x250_Article_3'); });
+		</script>
+	</div>
+	<!-- End - DagensDk_250x250_Article_3 -->
+
   </div>
   <div class="clearfix">
 
