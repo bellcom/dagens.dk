@@ -77,7 +77,7 @@ function five_recent_news_page() {
   print views_embed_view('5_recent_news','block');
   print '<script type="text/javascript"> var as = document.getElementsByTagName("a");
     for (var i = 0, l = as.length; i < l; i++) {
-      var link = "http://eas8.emediate.eu/eas?camp=180739;ty=ct;EASLink=" + as[i].href;
+      var link = "http://eas8.emediate.eu/eas?camp=197745;ty=ct;EASLink=" + as[i].href;
       as[i].setAttribute("target","_blank");
       as[i].href = link;
     }
