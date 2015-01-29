@@ -76,7 +76,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="/sites/all/iphone4.png" />
 
     <script type='text/javascript'>
-      var // googletag = googletag || {};
+      var googletag = googletag || {};
       googletag.cmd = googletag.cmd || [];
       (function() {
         var gads = document.createElement('script');
