@@ -200,17 +200,13 @@ document.write(\'<scr\'+\'ipt type="text/javascript" src="http://dinsalgsvagt.ad
     $pane->configuration = array(
       'admin_title' => 'Banner - Sidepanel 1',
       'title' => '<none>',
-      'body' => '<!-- adServing 7.1.1c  + Artikel 1 300x250 -->
-<script type="text/javascript">
-     var adspaceid = \'4\';
-     var keywords = \'sex\';
-     var searchwords = \'\'; //insert searchwords seperated by Semicolon
-     if(adServingLoad == undefined) var adServingLoad = \'\';
-     document.write(\'<scr\'+\'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/js.php?adspaceid=\'+adspaceid+\'&adServingLoad=\'+adServingLoad+\'&keywords=\'+keywords+\'&sw=\'+searchwords+\'&rnd=\'+Math.random()+\'"></scr\'+\'ipt>\');
-</script>
-<noscript>
-     <iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=4&keywords=" frameborder="0" marginheight="0" marginwidth="0" width="320" height="250" scrolling="no" style="width:320px; height:250px; margin:0px;"></iframe>
-</noscript>
+      'body' => '<!-- Begin - DagensDK_300x250_1 -->
+<div id=\'div-DagensDk_300x250_1\' style=\'width:300px; height:250px;\'>
+	<script type=\'text/javascript\'>
+		googletag.cmd.push(function() { googletag.display(\'div-DagensDk_300x250_1\'); });
+	</script>
+</div>
+<!-- End - DagensDK_300x250_1 -->
 
 <!-- adServing 7.1.1c  + Floating banner -->
 <script type="text/javascript">
@@ -276,17 +272,13 @@ document.write(\'<scr\'+\'ipt type="text/javascript" src="http://dinsalgsvagt.ad
     $pane->configuration = array(
       'admin_title' => 'Banner - Sidepanel 1',
       'title' => '<none>',
-      'body' => '<!-- adServing 7.1.1c  + Artikel 2 300x250 -->
-<script type="text/javascript">
-     var adspaceid = \'5\';
-     var keywords = \'sex\';
-     var searchwords = \'\'; //insert searchwords seperated by Semicolon
-     if(adServingLoad == undefined) var adServingLoad = \'\';
-     document.write(\'<scr\'+\'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/js.php?adspaceid=\'+adspaceid+\'&adServingLoad=\'+adServingLoad+\'&keywords=\'+keywords+\'&sw=\'+searchwords+\'&rnd=\'+Math.random()+\'"></scr\'+\'ipt>\');
-</script>
-<noscript>
-     <iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=5&keywords=" frameborder="0" marginheight="0" marginwidth="0" width="320" height="250" scrolling="no" style="width:320px; height:250px; margin:0px;"></iframe>
-</noscript>',
+      'body' => '<!-- Begin - DagensDK_300x250_2 -->
+<div id=\'div-DagensDK_300x250_2\' style=\'width:300px; height:250px;\'>
+	<script type=\'text/javascript\'>
+		googletag.cmd.push(function() { googletag.display(\'div-DagensDK_300x250_2\'); });
+	</script>
+</div>
+<!—- End - DagensDK_300x250_2 -->',
       'format' => 'banner',
       'substitute' => TRUE,
     );
