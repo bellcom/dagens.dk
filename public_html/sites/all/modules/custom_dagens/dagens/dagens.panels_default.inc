@@ -410,13 +410,14 @@ var gmtp = "http", gmturl = gmtp + "://dk.gmads.net/r", gmttzd = (new Date).getT
       'body' => '<p>Ansvarshavende chefredakt&oslash;r:<br />
 	<a href="mailto:kasper@dagens.dk">Kasper Christensen</a></p>
 <p>Redaktionschef:<br />
-	<a href="mailto:kasper@dagens.dk">K</a><a href="http://kp@dagens.dk">irstine Petersen</a></p>
+	<a href="http://kp@dagens.dk">Kirstine Petersen</a></p>
 <p>Jourhavende<br />
 	<a href="mailto:ss@dagens.dk">Sol Stoffregen</a><br />
-	<a href="mailto:ror@dagens.dk">Ronja Ryde</a><br />
 	<a href="mailto:na@dagens.dk">Ninna Andreasen</a><br />
 	<a href="mailto:jesper@dagens.dk">Jesper Larsen</a><br />
-	<a href="mailto:jh@dagens.dk">Janni Hansen</a></p>
+	<a href="mailto:mm@dagens.dk">Marie Milling</a><br />
+	<a href="mailto:mll@dagens.dk">Morten Larsen</a><br />
+	<a href="mailto:ln@dagens.dk">Laura Nygaard</a></p>
 <div class="contact">
 	Kontakt dagens.dk:<br />
 	<a href="mailto:redaktion@dagens.dk" title="redaktion@dagens.dk">redaktion@dagens.dk</a><br />
