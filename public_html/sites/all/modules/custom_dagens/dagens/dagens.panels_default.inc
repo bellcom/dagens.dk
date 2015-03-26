@@ -128,14 +128,6 @@ gt.async=\'true\'; gt.src=l+\'://gadk.hit.gemius.pl/xlgemius.js\'; s.parentNode.
 //--><!]]>
 </script>
 
-<!-- adServing 7.1.1c  + Floating banner -->
-<script type="text/javascript">
-     var adspaceid = \'41\';
-     var keywords = \'sex\';
-     if(adServingLoad == undefined) var adServingLoad = \'\';
-     document.write(\'<scr\'+\'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/floating.php?adspaceid=\'+adspaceid+\'&adServingLoad=\'+adServingLoad+\'&keywords=\'+keywords+\'&rnd=\'+Math.random()+\'"></scr\'+\'ipt>\');
-</script>
-
 <!-- adServing 7.1.1c www.dagens.dk + Wallpaper -->
 <script type="text/javascript">
 var adspaceid = \'202\';
@@ -206,15 +198,7 @@ document.write(\'<scr\'+\'ipt type="text/javascript" src="http://dinsalgsvagt.ad
 		googletag.cmd.push(function() { googletag.display(\'div-DagensDk_300x250_1\'); });
 	</script>
 </div>
-<!-- End - DagensDK_300x250_1 -->
-
-<!-- adServing 7.1.1c  + Floating banner -->
-<script type="text/javascript">
-     var adspaceid = \'41\';
-     var keywords = \'sex\';
-     if(adServingLoad == undefined) var adServingLoad = \'\';
-     document.write(\'<scr\'+\'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/floating.php?adspaceid=\'+adspaceid+\'&adServingLoad=\'+adServingLoad+\'&keywords=\'+keywords+\'&rnd=\'+Math.random()+\'"></scr\'+\'ipt>\');
-</script>',
+<!-- End - DagensDK_300x250_1 -->',
       'format' => 'banner',
       'substitute' => TRUE,
     );
