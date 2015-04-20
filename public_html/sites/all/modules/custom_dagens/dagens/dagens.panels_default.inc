@@ -400,8 +400,11 @@ var gmtp = "http", gmturl = gmtp + "://dk.gmads.net/r", gmttzd = (new Date).getT
 	<a href="mailto:na@dagens.dk">Ninna Andreasen</a><br />
 	<a href="mailto:jesper@dagens.dk">Jesper Larsen</a><br />
 	<a href="mailto:mm@dagens.dk">Marie Milling</a><br />
+	<a href="mailto:ak@dagens.dk">Alexander Klemp</a><br />
+	<a href="mailto:ane@dagens.dk">Ane S&oslash;rensen</a><br />
 	<a href="mailto:mll@dagens.dk">Morten Larsen</a><br />
-	<a href="mailto:ln@dagens.dk">Laura Nygaard</a></p>
+	<a href="mailto:ln@dagens.dk">Laura Nygaard</a><br />
+	<a href="mailto:ksb@dagens.dk">Kristine Bugbee</a></p>
 <div class="contact">
 	Kontakt dagens.dk:<br />
 	<a href="mailto:redaktion@dagens.dk" title="redaktion@dagens.dk">redaktion@dagens.dk</a><br />
