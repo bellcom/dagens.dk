@@ -72,6 +72,7 @@
       hide($content['fb_comments']);
       hide($content['sharethis']);
       hide($content['field_indhold2']);
+      $content['body'][0]['#markup'] = preg_replace_callback('#(<p>.*?</p>)#', 'dagens_insert_ad_on_article', $content['body'][0]['#markup'] );
       print render($content);
     ?>
     <?php echo views_embed_view('billeder_fra_artikel', $display_id = 'block') ?>
