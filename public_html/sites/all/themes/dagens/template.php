@@ -26,7 +26,7 @@ function dagens_insert_ad_on_article($matches)
     $ret = $matches[1];
     if (++$count == 3) {
         $ret .= <<<EOL
-<!-- adServing 7.1.1c www.dagens.dk + Adform OS 1x1 -->
+<!-- adServing 7.1.1c www.dagens.dk + Adform OS (inread) 1x1 -->
 <script type="text/javascript">
 var adspaceid = '713';
 var keywords = '';
