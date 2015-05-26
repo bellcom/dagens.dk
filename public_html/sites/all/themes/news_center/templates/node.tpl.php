@@ -141,6 +141,18 @@
         print '<div class="article-images-link"><a href="/billeder/'.$node->nid.'"><strong>Kilk her for at se alle billederne i fuld størrelse »</strong></a></div>';
       }
     ?>
+
+      <!-- adServing 7.1.1c www.dagens.dk + Dagens.dk 1x1 (mobil) -->
+      <script type="text/javascript">
+        var adspaceid = '715';
+        var keywords = '';
+        if(adServingLoad == undefined) var adServingLoad = '';
+        document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/js.php?adspaceid='+adspaceid+'&adServingLoad='+adServingLoad+'&keywords='+keywords+'&click="></scr'+'ipt>');
+      </script>
+
+      <noscript>
+        <iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=715&keywords=&click=" frameborder="0" marginheight="0" marginwidth="0" width="1" height="1" scrolling="no" style="width:1px; height:1px; margin:0px;"></iframe>
+      </noscript>
   </div>
 
   <?php if ($page): ?> 
