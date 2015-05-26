@@ -124,17 +124,13 @@
       <a id="main-content"></a>
 
 
-<!-- adServing 7.1.1c www.dagens.dk + Mobil 300x250 Top Artikel -->
-<script type="text/javascript">
-var adspaceid = '197';
-var keywords = 'sex';
-var searchwords = ''; //insert searchwords seperated by semicolon
-if(adServingLoad == undefined) var adServingLoad = '';
-document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/js.php?adspaceid='+adspaceid+'&adServingLoad='+adServingLoad+'&keywords='+keywords+'&sw='+searchwords+'&rnd='+Math.random()+'"></scr'+'ipt>');
-</script>    
-<noscript>
-<iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=197&keywords=" frameborder="0" marginheight="0" marginwidth="0" width="300" height="250" scrolling="no" style="width:300px; height:250px; margin:0px;"></iframe>
-</noscript>
+        <!-- BEGIN DagensDK_Mobile_300x50_Article_1 -->
+        <div id='div-DagensDK_Mobile_300x50_Article_1'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-DagensDK_Mobile_300x50_Article_1'); });
+            </script>
+        </div>
+        <!-- END DagensDK_Mobile_300x50_Article_1 -->
 
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
