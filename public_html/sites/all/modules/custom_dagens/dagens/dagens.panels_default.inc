@@ -107,17 +107,13 @@ function dagens_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => 'Banner header',
       'title' => '<none>',
-      'body' => '<!-- adServing 7.1.1c  + Topbanner 930x180 -->
-<script type="text/javascript">
-     var adspaceid = \'6\';
-     var keywords = \'sex\';
-     var searchwords = \'\'; //insert searchwords seperated by Semicolon
-     if(adServingLoad == undefined) var adServingLoad = \'\';
-     document.write(\'<scr\'+\'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/js.php?adspaceid=\'+adspaceid+\'&adServingLoad=\'+adServingLoad+\'&keywords=\'+keywords+\'&sw=\'+searchwords+\'&rnd=\'+Math.random()+\'"></scr\'+\'ipt>\');
+      'body' => '<!-- BEGIN DagensDK_930x180_1 -->
+<div id=\'div-DagensDK_930x180_1\'>
+<script type=\'text/javascript\'>
+googletag.cmd.push(function() { googletag.display(\'div-DagensDK_930x180_1\'); });
 </script>
-<noscript>
-     <iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=6&keywords=" frameborder="0" marginheight="0" marginwidth="0" width="930" height="180" scrolling="no" style="width:930px; height:180px; margin:0px;"></iframe>
-</noscript>
+</div>
+<!-- END DagensDK_930x180_1 -->
 
 <!-- (C)2000-2013 Gemius SA - gemiusAudience / dagens.dk / Main Page -->
 <script type="text/javascript">
@@ -400,7 +396,6 @@ var gmtp = "http", gmturl = gmtp + "://dk.gmads.net/r", gmttzd = (new Date).getT
 	<a href="mailto:na@dagens.dk">Ninna Andreasen</a><br />
 	<a href="mailto:jesper@dagens.dk">Jesper Larsen</a><br />
 	<a href="mailto:mm@dagens.dk">Marie Milling</a><br />
-	<a href="mailto:ak@dagens.dk">Alexander Klemp</a><br />
 	<a href="mailto:ane@dagens.dk">Ane S&oslash;rensen</a><br />
 	<a href="mailto:mll@dagens.dk">Morten Larsen</a><br />
 	<a href="mailto:ln@dagens.dk">Laura Nygaard</a><br />
