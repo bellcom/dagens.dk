@@ -76,7 +76,6 @@
                   googletag.pubads().setTargeting("" + (crtg_split[i-1].split('='))[0] + "", "" + (crtg_split[i-1].split('='))[1] + "");
               }
               // END DFP RTA label splitter
-              googletag.defineSlot('/49662453/TestDagensDK_Thumbnails_Article_1', [[600, 200], [600, 450], [600, 338]], 'div-TestDagensDK_Thumbnails_Article_1').addService(googletag.pubads());
               googletag.pubads().enableSingleRequest();
               googletag.pubads().collapseEmptyDivs();
               googletag.enableServices();
@@ -156,7 +155,9 @@
                   googletag.pubads().setTargeting("" + (crtg_split[i-1].split('='))[0] + "", "" + (crtg_split[i-1].split('='))[1] + "");
               }
               // END DFP RTA label splitter
+              googletag.defineSlot('/49662453/TestDagensDK_Thumbnails_Article_1', [[600, 200], [600, 450], [600, 338]], 'div-TestDagensDK_Thumbnails_Article_1').addService(googletag.pubads());
               googletag.pubads().enableSingleRequest();
+              googletag.pubads().collapseEmptyDivs();
               googletag.enableServices();
           });
       </script>

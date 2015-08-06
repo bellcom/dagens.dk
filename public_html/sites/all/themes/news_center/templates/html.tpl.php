@@ -70,7 +70,7 @@
     
   <?php print $styles; ?>
   <?php print $scripts; ?>	
-  	<link rel="apple-touch-icon" href="/sites/all/iphone.png" />
+  <link rel="apple-touch-icon" href="/sites/all/iphone.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="/sites/all/ipad.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="/sites/all/iphone4.png" />
 
