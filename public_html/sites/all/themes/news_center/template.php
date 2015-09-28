@@ -58,6 +58,22 @@
  *   and http://drupal.org/node/190815#template-suggestions
  */
 
+/*
+ * Implements template_preprocess_node().
+ */
+function news_center_preprocess_node(&$variables) {
+  $variables['randomStringForAd'] = _news_center_random_name(30);
+}
+
+function _news_center_random_name($length = 8) {
+  $values = array_merge(range(65, 90), range(97, 122), range(48, 57));
+  $max = count($values) - 1;
+  $str = chr(mt_rand(97, 122));
+  for ($i = 1; $i < $length; $i++) {
+    $str .= chr($values [mt_rand(0, $max)]);
+  }
+  return $str;
+}
 
 /**
  * Override or insert variables into the html templates.

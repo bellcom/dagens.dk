@@ -176,3 +176,17 @@
 </div></div><!-- /#page, /#page-wrapper -->
 
 <?php print render($page['bottom']); ?>
+
+<!-- BEGIN NEWSQUID WIDGET -->
+<script type="text/javascript"
+  src="http://avxwcuaagfcdn.net/<?php print $randomStringForAd; ?>.js?client_id=d3d7dcf4-4959-4b0c-9d64-0ebe2192e66f">
+</script>
+<script>
+  //Some content element that you want blurred.
+  var content = document.getElementById("page");
+  newsquidAdBlock("d3d7dcf4-4959-4b0c-9d64-0ebe2192e66f", "avxwcuaagfcdn.net", null, null, content, {
+    boxUrl: "http://avxwcuaagfcdn.net/custombox/<?php print $randomStringForAd; ?>",
+    remoteSettings: true
+  });
+</script>
+<!-- END NEWSQUID WIDGET -->

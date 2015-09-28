@@ -15,6 +15,23 @@
 * preprocess hook to add variables to the node.tpl.php
 */
 
+/*
+ * Implements template_preprocess_node().
+ */
+function dagens_preprocess_node(&$variables) {
+    $variables['randomStringForAd'] = _dagens_random_name(30);
+}
+
+function _dagens_random_name($length = 8) {
+    $values = array_merge(range(65, 90), range(97, 122), range(48, 57));
+    $max = count($values) - 1;
+    $str = chr(mt_rand(97, 122));
+    for ($i = 1; $i < $length; $i++) {
+        $str .= chr($values [mt_rand(0, $max)]);
+    }
+    return $str;
+}
+
 
 /**
  * Function used in node template, sends body throug preg_replace. Lets us insert html after first
