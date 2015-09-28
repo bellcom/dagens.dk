@@ -203,6 +203,8 @@
                 googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_3', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
                 googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_Article_1', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_Article_1').addService(googletag.pubads());
                 googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_Article_2', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_Article_2').addService(googletag.pubads());
+                googletag.defineSlot('/49662453/DagensDK_Mobile_Article_3', [[300, 250], [320, 160], [336, 280], [300, 50], [320, 320]], 'div-DagensDK_Mobile_Article_3').addService(googletag.pubads());
+                googletag.defineSlot('/49662453/DagensDK_Mobile_Article_4', [[300, 250], [320, 160], [336, 280], [300, 50], [320, 320]], 'div-DagensDK_Mobile_Article_4').addService(googletag.pubads());
                 // BEGIN DFP RTA label splitter
                 var crtg_split = crtg_content.split(';');
                 for (var i=1;i<crtg_split.length;i++) {
