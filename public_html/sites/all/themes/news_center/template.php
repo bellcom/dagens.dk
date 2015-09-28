@@ -147,9 +147,10 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
  */
 function news_center_insert_ad_on_article($matches)
 {         
-  static $count = 0;
+  static $count = 1;
   $ret = $matches[1];
-  if (++$count == 2) {
+
+  if ($count == 3) {
     $ret .= <<<EOL
 <!-- BEGIN DagensDK_Mobile_300x50_Article_2 -->
 <div id='div-DagensDK_Mobile_300x50_Article_2'>
@@ -160,6 +161,31 @@ googletag.cmd.push(function() { googletag.display('div-DagensDK_Mobile_300x50_Ar
 <!-- END DagensDK_Mobile_300x50_Article_2 -->
 EOL;
   }
+
+  if($count == 6) {
+    $ret .= <<<EOL
+<!-- BEGIN DagensDK_Mobile_Article_3 -->
+<div id='div-DagensDK_Mobile_Article_3'>
+<script type='text/javascript'>
+googletag.cmd.push(function () { googletag.display('div-DagensDK_Mobile_Article_3'); });
+</script>
+</div>
+<!-- END DagensDK_Mobile_Article_3 -->
+EOL;
+  }
+
+  if($count == 11) {
+    $ret .= <<<EOL
+<!-- BEGIN DagensDK_Mobile_Article_4 -->
+<div id='div-DagensDK_Mobile_Article_4'>
+<script type='text/javascript'>
+googletag.cmd.push(function () { googletag.display('div-DagensDK_Mobile_Article_4'); });
+</script>
+</div>
+<!-- END DagensDK_Mobile_Article_4 -->
+EOL;
+  }
+  $count++;
 
   return $ret;
 }
