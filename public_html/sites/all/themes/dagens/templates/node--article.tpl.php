@@ -127,6 +127,7 @@
     </script>
   </div>
   <!-- END DagensDK_Thumbnails_Article_1 -->
+
 	<!-- Begin - DagensDK_250x250_Article_2 -->
 	<div class="ad-left ad" id='div-DagensDk_250x250_Article_2' style='width:250px; height:250px;'>
 		<script type='text/javascript'>
@@ -134,7 +135,6 @@
 		</script>
 	</div>
 	<!-- End - DagensDK_250x250_Article_2 -->
-
 
 	<!-- Begin - DagensDk_250x250_Article_3 -->
 	<div class="ad-right ad" id='div-DagensDk_250x250_Article_3' style='width:250px; height:250px;'>
@@ -146,8 +146,28 @@
 
   </div>
   <div class="clearfix">
-
-
    <?php print render($content['fb_comments']); ?>
   </div>
+
+  <!-- BEGIN SPRINKLECONTENT WIDGET -->
+  <div style="width:604px">
+    <div data-spklw-widget="widget-55f03fe52f688"></div>
+    <script src="http://widgets.sprinklecontent.com/v2/sprinkle.js" async></script>
+  </div>
+  <!-- END SPRINKLECONTENT WIDGET -->
+
 </article>
+
+<!-- BEGIN NEWSQUID WIDGET -->
+<script type="text/javascript"
+        src="http://avxwcuaagfcdn.net/<?php print $randomStringForAd; ?>.js?client_id=d3d7dcf4-4959-4b0c-9d64-0ebe2192e66f">
+</script>
+<script>
+  //Some content element that you want blurred.
+  var content = document.getElementById("page");
+  newsquidAdBlock("d3d7dcf4-4959-4b0c-9d64-0ebe2192e66f", "avxwcuaagfcdn.net", null, null, content, {
+    boxUrl: "http://avxwcuaagfcdn.net/custombox/<?php print $randomStringForAd; ?>",
+    remoteSettings: true
+  });
+</script>
+<!-- END NEWSQUID WIDGET -->

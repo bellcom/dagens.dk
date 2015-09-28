@@ -199,5 +199,18 @@
      document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/floating.php?adspaceid='+adspaceid+'&adServingLoad='+adServingLoad+'&keywords='+keywords+'&rnd='+Math.random()+'"></scr'+'ipt>');
 </script>
 
+<!-- BEGIN USERREPORT SCRIPT -->
+<script type="text/javascript">
+    var _urq = _urq || [];
+    _urq.push(['initSite', '2ef45aea-94e5-4227-946b-b246ca756387']);
+    (function() {
+        var ur = document.createElement('script'); ur.type = 'text/javascript'; ur.async = true;
+        ur.src = ('https:' == document.location.protocol ? 'https://cdn.userreport.com/userreport.js' : 'http://cdn.userreport.com/userreport.js');
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s);
+    })();
+    (new Image()).src = 'https://visitanalytics.userreport.com/hit.gif?t=MGD0a6c7fda?rnd=' + Math.random();
+</script>
+<!-- END USERREPORT SCRIPT -->
+
 </body>
 </html>
