@@ -95,9 +95,9 @@
 
         <script type='text/javascript'>
             googletag.cmd.push(function () {
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_1', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_2', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_3', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
+                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_1', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
+                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_2', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
+                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_3', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
                 googletag.pubads().enableSingleRequest();
                 googletag.enableServices();
             });
@@ -124,11 +124,11 @@
 
         <script type='text/javascript'>
             googletag.cmd.push(function () {
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_1', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_2', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_3', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_Article_1', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_Article_1').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_Article_2', [[300, 50], [300, 250], [320, 320]], 'div-DagensDK_Mobile_300x50_Article_2').addService(googletag.pubads());
+                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_1', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
+                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_2', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
+                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_3', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
+                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_Article_1', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_1').addService(googletag.pubads());
+                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_Article_2', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_2').addService(googletag.pubads());
                 googletag.defineSlot('/49662453/DagensDK_Mobile_Article_3', [[300, 250], [320, 160], [336, 280], [300, 50], [320, 320]], 'div-DagensDK_Mobile_Article_3').addService(googletag.pubads());
                 googletag.defineSlot('/49662453/DagensDK_Mobile_Article_4', [[300, 250], [320, 160], [336, 280], [300, 50], [320, 320]], 'div-DagensDK_Mobile_Article_4').addService(googletag.pubads());
                 googletag.pubads().enableSingleRequest();
