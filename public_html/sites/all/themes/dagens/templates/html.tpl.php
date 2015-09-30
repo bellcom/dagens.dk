@@ -194,10 +194,10 @@
 
 <!-- adServing 7.1.1c  + Floating banner -->
 <script type="text/javascript">
-     var adspaceid = '41';
-     var keywords = 'sex';
-     if(adServingLoad == undefined) var adServingLoad = '';
-     document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/floating.php?adspaceid='+adspaceid+'&adServingLoad='+adServingLoad+'&keywords='+keywords+'&rnd='+Math.random()+'"></scr'+'ipt>');
+    var adspaceid = '41';
+    var keywords = 'test';
+    if(adServingLoad == undefined) var adServingLoad = '';
+    document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/floating.php?adspaceid='+adspaceid+'&adServingLoad='+adServingLoad+'&keywords='+keywords+'&rnd='+Math.random()+'"></scr'+'ipt>');
 </script>
 
 </body>
