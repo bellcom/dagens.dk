@@ -207,13 +207,6 @@
       </div>
     </div>
 
-    <!-- BEGIN SPRINKLECONTENT WIDGET -->
-    <div style="width:100%">
-      <div data-spklw-widget="widget-55f03fe52f688"></div>
-      <script src="http://widgets.sprinklecontent.com/v2/sprinkle.js" async></script>
-    </div>
-    <!-- END SPRINKLECONTENT WIDGET -->
-
 	  <script type="text/javascript">
 	    window.___gcfg = {lang: 'da'};
 
@@ -226,6 +219,14 @@
     <?php print render($content['field_keywords']);  ?><br />
 
     <?php print render($content['comments']); ?>
+
+    <!-- BEGIN SPRINKLECONTENT WIDGET -->
+    <div style="width:100%">
+      <div data-spklw-widget="widget-55f03fe52f688"></div>
+      <script src="http://widgets.sprinklecontent.com/v2/sprinkle.js" async></script>
+    </div>
+    <!-- END SPRINKLECONTENT WIDGET -->
+
   <?php endif; ?>
   
   <?php if (!$page && $title): ?>   
