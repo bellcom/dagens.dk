@@ -149,13 +149,6 @@
    <?php print render($content['fb_comments']); ?>
   </div>
 
-  <!-- BEGIN SPRINKLECONTENT WIDGET -->
-  <div style="width:604px">
-    <div data-spklw-widget="widget-55f03fe52f688"></div>
-    <script src="http://widgets.sprinklecontent.com/v2/sprinkle.js" async></script>
-  </div>
-  <!-- END SPRINKLECONTENT WIDGET -->
-
 </article>
 
 <!-- BEGIN NEWSQUID WIDGET -->
