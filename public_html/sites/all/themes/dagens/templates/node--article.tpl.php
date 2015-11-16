@@ -118,33 +118,6 @@
     </form>
 
   </div>
-  <div class="google-ads-article-bottom">
-
-  <!-- BEGIN DagensDK_Thumbnails_Article_1 -->
-  <div id='div-DagensDK_Thumbnails_Article_1'>
-    <script type='text/javascript'>
-      googletag.cmd.push(function() { googletag.display('div-DagensDK_Thumbnails_Article_1'); });
-    </script>
-  </div>
-  <!-- END DagensDK_Thumbnails_Article_1 -->
-
-	<!-- Begin - DagensDK_250x250_Article_2 -->
-	<div class="ad-left ad" id='div-DagensDk_250x250_Article_2' style='width:250px; height:250px;'>
-		<script type='text/javascript'>
-			googletag.cmd.push(function() { googletag.display('div-DagensDk_250x250_Article_2'); });
-		</script>
-	</div>
-	<!-- End - DagensDK_250x250_Article_2 -->
-
-	<!-- Begin - DagensDk_250x250_Article_3 -->
-	<div class="ad-right ad" id='div-DagensDk_250x250_Article_3' style='width:250px; height:250px;'>
-		<script type='text/javascript'>
-			googletag.cmd.push(function() { googletag.display('div-DagensDk_250x250_Article_3'); });
-		</script>
-	</div>
-	<!-- End - DagensDk_250x250_Article_3 -->
-
-  </div>
   <div class="clearfix">
    <?php print render($content['fb_comments']); ?>
   </div>
