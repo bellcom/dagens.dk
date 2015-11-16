@@ -39,9 +39,10 @@ function _dagens_random_name($length = 8) {
  */
 function dagens_insert_ad_on_article($matches)
 {
-    static $count = 0;
+    static $count = 1;
     $ret = $matches[1];
-    if (++$count == 3) {
+
+    if ($count == 3) {
         $ret .= <<<EOL
 <!-- adServing 7.1.1c www.dagens.dk + Adform OS (inread) 1x1 -->
 <div style="width:455px">
@@ -55,7 +56,29 @@ document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adser
 <iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=713&keywords=&click=" frameborder="0" marginheight="0" marginwidth="0" width="1" height="1" scrolling="no" style="width:1px; height:1px; margin:0px;"></iframe>
 </noscript>
 </div>
+<!-- BEGIN DagensDK_300x250_Desktop_Article_1 -->
+<div id='div-DagensDK_300x250_Desktop_Article_1' style='height:250px; width:300px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-DagensDK_300x250_Desktop_Article_1'); });
+</script>
+</div>
+<!-- END DagensDK_300x250_Desktop_Article_1 -->
 EOL;
     }
+
+    if($count == 10) {
+        $ret .= <<<EOL
+<!-- BEGIN DagensDK_300x250_Desktop_Article_2 -->
+<div id='div-DagensDK_300x250_Desktop_Article_2' style='height:250px; width:300px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-DagensDK_300x250_Desktop_Article_2'); });
+</script>
+</div>
+<!-- END DagensDK_300x250_Desktop_Article_2 -->
+EOL;
+    }
+
+    $count++;
+
     return $ret;
 }
