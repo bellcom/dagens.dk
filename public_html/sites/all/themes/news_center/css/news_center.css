@@ -283,6 +283,9 @@ font-weight: bold;
 	-webkit-transition: background-color 0.5s ease-out;
 	transition: background-color 0.5s ease-out;
 }
+.region-content0 .block-views img {
+    float: none;
+}
 .view-id-featured_article.view-display-id-block_6.art-liste img
  {
     max-width: 110px;
