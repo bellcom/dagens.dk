@@ -91,8 +91,8 @@
       </script>
       <script type='text/javascript'>
         var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
         setTimeout(function(){
-          googletag.cmd = googletag.cmd || [];
           (function () {
             /*jslint browser:true */
             /*jslint eqeq: true*/
@@ -135,8 +135,8 @@
       </script>
       <script type='text/javascript'>
         var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
         setTimeout(function(){
-          googletag.cmd = googletag.cmd || [];
           (function () {
             /*jslint browser:true */
             /*jslint eqeq: true*/
