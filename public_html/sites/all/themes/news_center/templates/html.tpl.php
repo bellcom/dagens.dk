@@ -76,22 +76,37 @@
 
     <?php if(drupal_is_front_page()) { ?>
         <!-- BEGIN DFP header scripts on mobile frontpage -->
-        <script type='text/javascript'>
-            var googletag = googletag || {};
-            googletag.cmd = googletag.cmd || [];
-            (function () {
-                /*jslint browser:true */
-                /*jslint eqeq: true*/
-                var gads, useSSL, node;
-                gads = document.createElement('script');
-                gads.async = true;
-                gads.type = 'text/javascript';
-                useSSL = 'https:' == document.location.protocol;
-                gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-                node = document.getElementsByTagName('script')[0];
-                node.parentNode.insertBefore(gads, node);
-            })();
-        </script>
+      <script type='text/javascript'>
+        var pm_pub_id = 119281; // PubMatic Publisher ID.
+        var pm_dm_enabled = true; // For DM implementation.
+        var pm_timeout = 500; // optional timeout for PubMatic call.
+        (function () {
+          var pmads = document.createElement('script');
+          pmads.async = true;
+          pmads.type = 'text/javascript';
+          pmads.src = '//ads.pubmatic.com/AdServer/js/dm_gpt_generic.js';
+          var node = document.getElementsByTagName('script')[0];
+          node.parentNode.insertBefore(pmads, node);
+        })();
+      </script>
+      <script type='text/javascript'>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        setTimeout(function(){
+          (function () {
+            /*jslint browser:true */
+            /*jslint eqeq: true*/
+            var gads, useSSL, node;
+            gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+            node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+          })();
+        }, 50);
+      </script>
 
         <script type='text/javascript'>
             googletag.cmd.push(function () {
@@ -105,22 +120,37 @@
         <!-- END DFP header scripts on mobile frontpage -->
     <?php } else { ?>
         <!-- BEGIN DFP header scripts on mobile article pages -->
-        <script type='text/javascript'>
-            var googletag = googletag || {};
-            googletag.cmd = googletag.cmd || [];
-            (function () {
-                /*jslint browser:true */
-                /*jslint eqeq: true*/
-                var gads, useSSL, node;
-                gads = document.createElement('script');
-                gads.async = true;
-                gads.type = 'text/javascript';
-                useSSL = 'https:' == document.location.protocol;
-                gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-                node = document.getElementsByTagName('script')[0];
-                node.parentNode.insertBefore(gads, node);
-            })();
-        </script>
+      <script type='text/javascript'>
+        var pm_pub_id = 119281; // PubMatic Publisher ID.
+        var pm_dm_enabled = true; // For DM implementation.
+        var pm_timeout = 500; // optional timeout for PubMatic call.
+        (function () {
+          var pmads = document.createElement('script');
+          pmads.async = true;
+          pmads.type = 'text/javascript';
+          pmads.src = '//ads.pubmatic.com/AdServer/js/dm_gpt_generic.js';
+          var node = document.getElementsByTagName('script')[0];
+          node.parentNode.insertBefore(pmads, node);
+        })();
+      </script>
+      <script type='text/javascript'>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        setTimeout(function(){
+          (function () {
+            /*jslint browser:true */
+            /*jslint eqeq: true*/
+            var gads, useSSL, node;
+            gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+            node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+          })();
+        }, 50);
+      </script>
 
         <script type='text/javascript'>
             googletag.cmd.push(function () {
