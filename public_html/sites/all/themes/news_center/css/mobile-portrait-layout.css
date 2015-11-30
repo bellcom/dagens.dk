@@ -6,9 +6,7 @@
 */
 
 /** iframe 320px padding ticket : PBG-447-41330 ***/
-.node .content,
-.panel-pane.pane-views,
-.block.block-views {
+.panel-pane.pane-views {
   width: 300px;
   margin: 0 auto;
 }
@@ -67,7 +65,8 @@ margin-bottom: 0;
 #main-wrapper {
     background: none repeat scroll 0 0 transparent;    
    /* padding: 10px 10px 0;*/
-	width: 320px;		
+	width: auto;
+    max-width: 100%;
 }
 
 .sidebar-second #content {

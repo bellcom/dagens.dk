@@ -57,7 +57,7 @@ document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adser
 </noscript>
 </div>
 <!-- BEGIN DagensDK_300x250_Desktop_Article_1 -->
-<div id='div-DagensDK_300x250_Desktop_Article_1' style='height:250px; width:300px;'>
+<div id='div-DagensDK_300x250_Desktop_Article_1'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-DagensDK_300x250_Desktop_Article_1'); });
 </script>
@@ -69,7 +69,7 @@ EOL;
     if($count == 10) {
         $ret .= <<<EOL
 <!-- BEGIN DagensDK_300x250_Desktop_Article_2 -->
-<div id='div-DagensDK_300x250_Desktop_Article_2' style='height:250px; width:300px;'>
+<div id='div-DagensDK_300x250_Desktop_Article_2'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-DagensDK_300x250_Desktop_Article_2'); });
 </script>

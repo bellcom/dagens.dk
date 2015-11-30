@@ -13,6 +13,7 @@
  */
 
 function bc_theme_switch_custom_theme() {
+  return 'news_center';
 #  error_log(__LINE__.':'.__FILE__.' $_SERVER = ' . $_SERVER['HTTP_X_DEVICE']);
   if (isset($_SERVER['HTTP_X_DEVICE'])) {
     switch ($_SERVER['HTTP_X_DEVICE']) {
