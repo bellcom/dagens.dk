@@ -105,6 +105,7 @@
           googletag.defineSlot('/49662453/DagensDK_930x180_3', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-2').addService(googletag.pubads());
           googletag.defineOutOfPageSlot('/49662453/DagensDK_InterstitialsOnArticlePages', 'div-DagensDK_InterstitialsOnArticlePages').addService(googletag.pubads());
           googletag.pubads().enableSingleRequest();
+          googletag.pubads().collapseEmptyDivs();
           googletag.enableServices();
         });
       </script>
