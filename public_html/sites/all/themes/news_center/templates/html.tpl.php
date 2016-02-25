@@ -75,7 +75,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="/sites/all/iphone4.png" />
 
     <?php if(drupal_is_front_page()) { ?>
-        <!-- BEGIN DFP header scripts on mobile frontpage -->
+      <!-- BEGIN DFP header scripts on mobile frontpage -->
       <script type='text/javascript'>
         var pm_pub_id = 119281; // PubMatic Publisher ID.
         var pm_dm_enabled = true; // For DM implementation.
@@ -108,18 +108,18 @@
         }, 50);
       </script>
 
-        <script type='text/javascript'>
-            googletag.cmd.push(function () {
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_1', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_2', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_3', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
-                googletag.pubads().enableSingleRequest();
-                googletag.enableServices();
-            });
-        </script>
-        <!-- END DFP header scripts on mobile frontpage -->
+      <script type='text/javascript'>
+        googletag.cmd.push(function () {
+          googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_1', [[300, 50], [300, 100], [300, 250], [320, 50], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
+          googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_2', [[300, 50], [300, 100], [300, 250], [300, 600], [320, 50], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
+          googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_3', [[300, 50], [300, 100], [300, 250], [300, 600], [320, 50], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
+          googletag.pubads().enableSingleRequest();
+          googletag.enableServices();
+        });
+      </script>
+      <!-- END DFP header scripts on mobile frontpage -->
     <?php } else { ?>
-        <!-- BEGIN DFP header scripts on mobile article pages -->
+      <!-- BEGIN DFP header scripts on mobile article pages -->
       <script type='text/javascript'>
         var pm_pub_id = 119281; // PubMatic Publisher ID.
         var pm_dm_enabled = true; // For DM implementation.
@@ -152,20 +152,20 @@
         }, 50);
       </script>
 
-        <script type='text/javascript'>
-            googletag.cmd.push(function () {
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_1', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_2', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_3', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_Article_1', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_1').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_Article_2', [[300, 50], [300, 250], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_2').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_Article_3', [[300, 250], [320, 160], [336, 280], [300, 50], [320, 320]], 'div-DagensDK_Mobile_Article_3').addService(googletag.pubads());
-                googletag.defineSlot('/49662453/DagensDK_Mobile_Article_4', [[300, 250], [320, 160], [336, 280], [300, 50], [320, 320]], 'div-DagensDK_Mobile_Article_4').addService(googletag.pubads());
-                googletag.pubads().enableSingleRequest();
-                googletag.enableServices();
-            });
-        </script>
-        <!-- END DFP header scripts on mobile article pages -->
+      <script type='text/javascript'>
+        googletag.cmd.push(function () {
+          googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_Article_1', [[300, 50], [300, 100], [300, 250], [320, 50], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_1').addService(googletag.pubads());
+          googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_Article_2', [[300, 50], [300, 100], [300, 250], [320, 50], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_2').addService(googletag.pubads());
+          googletag.defineSlot('/49662453/DagensDK_Mobile_Article_3', [[300, 50], [300, 100], [300, 250], [320, 50], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_Article_3').addService(googletag.pubads());
+          googletag.defineSlot('/49662453/DagensDK_Mobile_Article_4', [[300, 50], [300, 100], [300, 250], [320, 50], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_Article_4').addService(googletag.pubads());
+          googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_1', [[300, 50], [300, 100], [300, 250], [300, 600], [320, 50], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
+          googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_2', [[300, 50], [300, 100], [300, 250], [300, 600], [320, 50], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
+          googletag.defineSlot('/49662453/DagensDK_Mobile_300x50_3', [[300, 50], [300, 100], [300, 250], [300, 600], [320, 50], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
+          googletag.pubads().enableSingleRequest();
+          googletag.enableServices();
+        });
+      </script>
+      <!-- END DFP header scripts on mobile article pages -->
     <?php } ?>
 
 </head>
