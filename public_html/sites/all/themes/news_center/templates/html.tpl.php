@@ -157,6 +157,7 @@ if (window.location.hostname === "test.dagens.dk") {
   }
       }
       googletag.pubads().enableSingleRequest();
+      googletag.pubads().collapseEmptyDivs();
       googletag.enableServices();
   });
 </script>
@@ -244,6 +245,7 @@ if (window.location.hostname === "test.dagens.dk") {
   }
       }
       googletag.pubads().enableSingleRequest();
+      googletag.pubads().collapseEmptyDivs();
       googletag.enableServices();
   });
 </script>
