@@ -120,47 +120,53 @@ if (window.location.hostname === "test.dagens.dk") {
   }, 50);
 </script>
 <script src="//sak.userreport.com/mediagroup/launcher.js"></script>
-<script type='text/javascript'>
-  googletag.cmd.push(function () {
-      var skyscraperDisplayAndAdSizeMap, boardDisplayAndAdSizeMap;
-      // 160x600 on desktop (>=1300x600), collapse on tablet and smaller devices devices (<1300x600)
-      skyscraperDisplayAndAdSizeMap = googletag.sizeMapping().addSize([0, 0], []).addSize([1300, 600], [160, 600]).build();
-      // 930x180 or 728x90 on desktop (>=930x200), 728x90 on tablet and smaller devices devices
-      boardDisplayAndAdSizeMap = googletag.sizeMapping().addSize([0, 0], [728, 90]).addSize([930, 200], [[930, 180], [728, 90]]).build();
-      if (is_dagens_mobile) {
-          if (!is_dagens_frontpage) {
+      <!-- tag specification -->
+      <script type='text/javascript'>
+        googletag.cmd.push(function () {
+          var do_skyscrapers_fit, boardDisplayAndAdSizeMap;
+          do_skyscrapers_fit = window.screen.availWidth > 1300 || window.screen.availHeight > 1300 || window.innerWidth > 1300 || window.innerHeight > 1300;
+          // 930x180 or 728x90 on desktop (>=930x200), 728x90 on tablet and smaller devices devices
+          boardDisplayAndAdSizeMap = googletag.sizeMapping().addSize([0, 0], [728, 90]).addSize([930, 200], [[930, 180], [728, 90]]).build();
+          if (is_dagens_mobile) {
+            if (!is_dagens_frontpage) {
               googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_Article_1', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_1').addService(googletag.pubads());
               googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_Article_2', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_2').addService(googletag.pubads());
               googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_Article_3', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_Article_3').addService(googletag.pubads());
               googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_Article_4', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_Article_4').addService(googletag.pubads());
-          }
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_1', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_2', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_3', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
-      } else {
-          if (!is_dagens_frontpage) {
+            }
+            googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_1', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
+            googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_2', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
+            googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_3', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
+          } else {
+            if (!is_dagens_frontpage) {
               googletag.defineSlot('/49662453/' + dagens_category + 'DagensDk_250x250_Article_1', [250, 250], 'div-DagensDk_250x250_Article_1').addService(googletag.pubads());
               googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_300x250_Desktop_Article_1', [[300, 250], [448, 252]], 'div-DagensDK_300x250_Desktop_Article_1').addService(googletag.pubads());
               googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_300x250_Desktop_Article_2', [[300, 250], [448, 252]], 'div-DagensDK_300x250_Desktop_Article_2').addService(googletag.pubads());
+            }
+            googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_1', [[728, 90], [930, 180]], 'div-DagensDK_930x180_1').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
+            if (do_skyscrapers_fit) { // no sizemap needed to detect if they fit
+              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_L', [160, 600], 'div-DagensDK_160x600_L').addService(googletag.pubads());
+              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_R', [160, 600], 'div-DagensDK_160x600_R').addService(googletag.pubads());
+            } else {
+              skyscraperDisplayAndAdSizeMap = googletag.sizeMapping().addSize([0, 0], []).addSize([1300, 600], [160, 600]).build();
+              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_L', [160, 600], 'div-DagensDK_160x600_L').defineSizeMapping(skyscraperDisplayAndAdSizeMap).addService(googletag.pubads());
+              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_R', [160, 600], 'div-DagensDK_160x600_R').defineSizeMapping(skyscraperDisplayAndAdSizeMap).addService(googletag.pubads());
+            }
+            googletag.defineSlot('/49662453/' + dagens_category + 'DagensDk_300x250_1', [300, 250], 'div-DagensDk_300x250_1').addService(googletag.pubads());
+            googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_300x250_2', [300, 250], 'div-DagensDK_300x250_2').addService(googletag.pubads());
+            googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_2', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-1').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
+            googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_3', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-2').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
+            if (is_dagens_frontpage) {
+              googletag.defineOutOfPageSlot('/49662453/' + dagens_category + 'DagensDK_InterstitialsOnFrontPage', 'div-DagensDK_InterstitialsOnFrontPage').addService(googletag.pubads());
+            } else {
+              googletag.defineOutOfPageSlot('/49662453/' + dagens_category + 'DagensDK_InterstitialsOnArticlePages', 'div-DagensDK_InterstitialsOnArticlePages').addService(googletag.pubads());
+            }
           }
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_1', [[728, 90], [930, 180]], 'div-DagensDK_930x180_1').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_L', [160, 600], 'div-DagensDK_160x600_L').defineSizeMapping(skyscraperDisplayAndAdSizeMap).addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_R', [160, 600], 'div-DagensDK_160x600_R').defineSizeMapping(skyscraperDisplayAndAdSizeMap).addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDk_300x250_1', [300, 250], 'div-DagensDk_300x250_1').addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_300x250_2', [300, 250], 'div-DagensDK_300x250_2').addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_2', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-1').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_3', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-2').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
-          if (is_dagens_frontpage) {
-      googletag.defineOutOfPageSlot('/49662453/' + dagens_category + 'DagensDK_InterstitialsOnFrontPage', 'div-DagensDK_InterstitialsOnFrontPage').addService(googletag.pubads());
-          } else {
-      googletag.defineOutOfPageSlot('/49662453/' + dagens_category + 'DagensDK_InterstitialsOnArticlePages', 'div-DagensDK_InterstitialsOnArticlePages').addService(googletag.pubads());
-  }
-      }
-      googletag.pubads().enableSingleRequest();
-      googletag.pubads().collapseEmptyDivs();
-      googletag.enableServices();
-  });
-</script>
+          googletag.pubads().enableSingleRequest();
+          googletag.pubads().collapseEmptyDivs();
+          googletag.enableServices();
+        });
+      </script>
 <!-- END DFP header scripts -->
     <?php } else { ?>
       <!-- BEGIN DFP header scripts -->
@@ -208,45 +214,51 @@ if (window.location.hostname === "test.dagens.dk") {
   }, 50);
 </script>
 <script src="//sak.userreport.com/mediagroup/launcher.js"></script>
+<!-- tag specification -->
 <script type='text/javascript'>
   googletag.cmd.push(function () {
-      var skyscraperDisplayAndAdSizeMap, boardDisplayAndAdSizeMap;
-      // 160x600 on desktop (>=1300x600), collapse on tablet and smaller devices devices (<1300x600)
-      skyscraperDisplayAndAdSizeMap = googletag.sizeMapping().addSize([0, 0], []).addSize([1300, 600], [160, 600]).build();
-      // 930x180 or 728x90 on desktop (>=930x200), 728x90 on tablet and smaller devices devices
-      boardDisplayAndAdSizeMap = googletag.sizeMapping().addSize([0, 0], [728, 90]).addSize([930, 200], [[930, 180], [728, 90]]).build();
-      if (is_dagens_mobile) {
-          if (!is_dagens_frontpage) {
-              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_Article_1', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_1').addService(googletag.pubads());
-              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_Article_2', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_2').addService(googletag.pubads());
-              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_Article_3', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_Article_3').addService(googletag.pubads());
-              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_Article_4', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_Article_4').addService(googletag.pubads());
-          }
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_1', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_2', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_3', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
-      } else {
-          if (!is_dagens_frontpage) {
-              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDk_250x250_Article_1', [250, 250], 'div-DagensDk_250x250_Article_1').addService(googletag.pubads());
-              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_300x250_Desktop_Article_1', [[300, 250], [448, 252]], 'div-DagensDK_300x250_Desktop_Article_1').addService(googletag.pubads());
-              googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_300x250_Desktop_Article_2', [[300, 250], [448, 252]], 'div-DagensDK_300x250_Desktop_Article_2').addService(googletag.pubads());
-          }
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_1', [[728, 90], [930, 180]], 'div-DagensDK_930x180_1').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_L', [160, 600], 'div-DagensDK_160x600_L').defineSizeMapping(skyscraperDisplayAndAdSizeMap).addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_R', [160, 600], 'div-DagensDK_160x600_R').defineSizeMapping(skyscraperDisplayAndAdSizeMap).addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDk_300x250_1', [300, 250], 'div-DagensDk_300x250_1').addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_300x250_2', [300, 250], 'div-DagensDK_300x250_2').addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_2', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-1').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
-          googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_3', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-2').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
-          if (is_dagens_frontpage) {
-      googletag.defineOutOfPageSlot('/49662453/' + dagens_category + 'DagensDK_InterstitialsOnFrontPage', 'div-DagensDK_InterstitialsOnFrontPage').addService(googletag.pubads());
-          } else {
-      googletag.defineOutOfPageSlot('/49662453/' + dagens_category + 'DagensDK_InterstitialsOnArticlePages', 'div-DagensDK_InterstitialsOnArticlePages').addService(googletag.pubads());
-  }
+    var do_skyscrapers_fit, boardDisplayAndAdSizeMap;
+    do_skyscrapers_fit = window.screen.availWidth > 1300 || window.screen.availHeight > 1300 || window.innerWidth > 1300 || window.innerHeight > 1300;
+    // 930x180 or 728x90 on desktop (>=930x200), 728x90 on tablet and smaller devices devices
+    boardDisplayAndAdSizeMap = googletag.sizeMapping().addSize([0, 0], [728, 90]).addSize([930, 200], [[930, 180], [728, 90]]).build();
+    if (is_dagens_mobile) {
+      if (!is_dagens_frontpage) {
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_Article_1', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_1').addService(googletag.pubads());
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_Article_2', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_Article_2').addService(googletag.pubads());
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_Article_3', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_Article_3').addService(googletag.pubads());
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_Article_4', [[300, 50], [300, 80], [300, 100], [300, 250], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_Article_4').addService(googletag.pubads());
       }
-      googletag.pubads().enableSingleRequest();
-      googletag.pubads().collapseEmptyDivs();
-      googletag.enableServices();
+      googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_1', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_1').addService(googletag.pubads());
+      googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_2', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_2').addService(googletag.pubads());
+      googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_Mobile_300x50_3', [[300, 50], [300, 80], [300, 100], [300, 250], [300, 600], [320, 50], [320, 80], [320, 100], [320, 320], [336, 280]], 'div-DagensDK_Mobile_300x50_3').addService(googletag.pubads());
+    } else {
+      if (!is_dagens_frontpage) {
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDk_250x250_Article_1', [250, 250], 'div-DagensDk_250x250_Article_1').addService(googletag.pubads());
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_300x250_Desktop_Article_1', [[300, 250], [448, 252]], 'div-DagensDK_300x250_Desktop_Article_1').addService(googletag.pubads());
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_300x250_Desktop_Article_2', [[300, 250], [448, 252]], 'div-DagensDK_300x250_Desktop_Article_2').addService(googletag.pubads());
+      }
+      googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_1', [[728, 90], [930, 180]], 'div-DagensDK_930x180_1').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
+      if (do_skyscrapers_fit) { // no sizemap needed to detect if they fit
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_L', [160, 600], 'div-DagensDK_160x600_L').addService(googletag.pubads());
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_R', [160, 600], 'div-DagensDK_160x600_R').addService(googletag.pubads());
+      } else {
+        skyscraperDisplayAndAdSizeMap = googletag.sizeMapping().addSize([0, 0], []).addSize([1300, 600], [160, 600]).build();
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_L', [160, 600], 'div-DagensDK_160x600_L').defineSizeMapping(skyscraperDisplayAndAdSizeMap).addService(googletag.pubads());
+        googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_160x600_R', [160, 600], 'div-DagensDK_160x600_R').defineSizeMapping(skyscraperDisplayAndAdSizeMap).addService(googletag.pubads());
+      }
+      googletag.defineSlot('/49662453/' + dagens_category + 'DagensDk_300x250_1', [300, 250], 'div-DagensDk_300x250_1').addService(googletag.pubads());
+      googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_300x250_2', [300, 250], 'div-DagensDK_300x250_2').addService(googletag.pubads());
+      googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_2', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-1').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
+      googletag.defineSlot('/49662453/' + dagens_category + 'DagensDK_930x180_3', [[728, 90], [930, 180]], 'div-gpt-ad-1418125366865-2').defineSizeMapping(boardDisplayAndAdSizeMap).addService(googletag.pubads());
+      if (is_dagens_frontpage) {
+        googletag.defineOutOfPageSlot('/49662453/' + dagens_category + 'DagensDK_InterstitialsOnFrontPage', 'div-DagensDK_InterstitialsOnFrontPage').addService(googletag.pubads());
+      } else {
+        googletag.defineOutOfPageSlot('/49662453/' + dagens_category + 'DagensDK_InterstitialsOnArticlePages', 'div-DagensDK_InterstitialsOnArticlePages').addService(googletag.pubads());
+      }
+    }
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
   });
 </script>
 <!-- END DFP header scripts -->
