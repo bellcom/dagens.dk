@@ -44,18 +44,6 @@ function dagens_insert_ad_on_article($matches)
 
     if ($count == 3) {
         $ret .= <<<EOL
-<!-- adServing 7.1.1c www.dagens.dk + Adform OS (inread) 1x1 -->
-<div style="width:455px">
-<script type="text/javascript">
-var adspaceid = '713';
-var keywords = '';
-if(adServingLoad == undefined) var adServingLoad = '';
-document.write('<scr'+'ipt type="text/javascript" src="http://dinsalgsvagt.adservinginternational.com/js.php?adspaceid='+adspaceid+'&adServingLoad='+adServingLoad+'&keywords='+keywords+'&click="></scr'+'ipt>');
-</script>
-<noscript>
-<iframe src="http://dinsalgsvagt.adservinginternational.com/iframe.php?adspaceid=713&keywords=&click=" frameborder="0" marginheight="0" marginwidth="0" width="1" height="1" scrolling="no" style="width:1px; height:1px; margin:0px;"></iframe>
-</noscript>
-</div>
 <!-- BEGIN DagensDK_300x250_Desktop_Article_1 -->
 <div id='div-DagensDK_300x250_Desktop_Article_1'>
 <script type='text/javascript'>
