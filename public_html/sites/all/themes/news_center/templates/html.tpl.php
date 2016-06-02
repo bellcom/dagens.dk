@@ -104,20 +104,20 @@
     <script type='text/javascript'>
       var googletag = googletag || {};
       googletag.cmd = googletag.cmd || [];
-      setTimeout(function () {
-        (function () {
-          /*jslint browser:true */
-          /*jslint eqeq: true*/
-          var gads, useSSL, node;
-          gads = document.createElement('script');
-          gads.async = true;
-          gads.type = 'text/javascript';
-          useSSL = 'https:' == document.location.protocol;
-          gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-          node = document.getElementsByTagName('script')[0];
-          node.parentNode.insertBefore(gads, node);
-        })();
-      }, 50);
+//      setTimeout(function () {
+      (function () {
+        /*jslint browser:true */
+        /*jslint eqeq: true*/
+        var gads, useSSL, node;
+        gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+      })();
+//      }, 50);
     </script>
     <script src="//sak.userreport.com/mediagroup/launcher.js"></script>
     <!-- tag specification -->
