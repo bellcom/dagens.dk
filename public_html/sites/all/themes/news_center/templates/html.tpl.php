@@ -119,7 +119,7 @@
       })();
 //      }, 50);
     </script>
-    <script src="//sak.userreport.com/mediagroup/launcher.js"></script>
+<!--    <script src="//sak.userreport.com/mediagroup/launcher.js"></script>-->
     <!-- tag specification -->
     <script type='text/javascript'>
       googletag.cmd.push(function () {
