@@ -213,7 +213,7 @@
       })();
 //      }, 50);
     </script>
-    <script src="//sak.userreport.com/mediagroup/launcher.js"></script>
+<!--    <script src="//sak.userreport.com/mediagroup/launcher.js"></script>-->
     <!-- tag specification -->
     <script type='text/javascript'>
       googletag.cmd.push(function () {
@@ -274,19 +274,17 @@
   <?php print $page_bottom; ?>
 
   <!-- BEGIN USERREPORT SCRIPT -->
-  <script type="text/javascript">
-      var _urq = _urq || [];
-      _urq.push(['initSite', '2ef45aea-94e5-4227-946b-b246ca756387']);
-      (function() {
-          var ur = document.createElement('script'); ur.type = 'text/javascript'; ur.async = true;
-          ur.src = ('https:' == document.location.protocol ? 'https://cdn.userreport.com/userreport.js' : 'http://cdn.userreport.com/userreport.js');
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s);
-      })();
-      (new Image()).src = 'https://visitanalytics.userreport.com/hit.gif?t=MGD0a6c7fda?rnd=' + Math.random();
-  </script>
+<!--  <script type="text/javascript">-->
+<!--      var _urq = _urq || [];-->
+<!--      _urq.push(['initSite', '2ef45aea-94e5-4227-946b-b246ca756387']);-->
+<!--      (function() {-->
+<!--          var ur = document.createElement('script'); ur.type = 'text/javascript'; ur.async = true;-->
+<!--          ur.src = ('https:' == document.location.protocol ? 'https://cdn.userreport.com/userreport.js' : 'http://cdn.userreport.com/userreport.js');-->
+<!--          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s);-->
+<!--      })();-->
+<!--      (new Image()).src = 'https://visitanalytics.userreport.com/hit.gif?t=MGD0a6c7fda?rnd=' + Math.random();-->
+<!--  </script>-->
   <!-- END USERREPORT SCRIPT -->
-
-
 
   <?php if(drupal_is_front_page()) { ?>
     <!-- BEGIN DagensDK_InterstitialsOnFrontPage -->
