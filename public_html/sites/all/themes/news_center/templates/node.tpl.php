@@ -186,7 +186,7 @@
         <input type="submit" class="submit" value="Ja tak" />
     </form>
 
-
+    
 
     <div class="social-plugins">
     <?php print $block['content']; ?>
